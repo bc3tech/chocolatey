@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>VerizonMessagePlus</id>
+        <version>1.0</version>
+        <title>Verizon Message+</title>
+        <authors>BC3Tech,Verizon Wireless</authors>
+        <owners>BC3Tech</owners>
+        <projectUrl>http://www.verizonwireless.com/wcms/consumer/products/verizon-messages.html</projectUrl>
+        <iconUrl>http://www.verizonwireless.com/content/dam/vzw/lobs/consumer/media-products/VM-icon.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>The Verizon Wireless Message+ desktop application</description>
+        <summary />
+        <releaseNotes />
+        <copyright />
+        <tags>verizon sms</tags>
+        <dependencies>
+            <dependency id="python.x86" version="2.7.6" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+    </files>
+</package>

@@ -1,0 +1,1 @@
+Install-ChocolateyPackage -packagename 'VerizonMessagePlus' -filetype exe -url 'https://web.vma.vzw.com/downloads/Message+.exe'

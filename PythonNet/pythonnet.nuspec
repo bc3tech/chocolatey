@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>pythonnet</id>
+    <title>Python .Net</title>
+    <version>1.01</version>
+    <authors>BC3Tech,Brian Lloyd</authors>
+    <owners>BC3Tech</owners>
+    <summary>Python .Net clr and runtime</summary>
+    <description>Contains the Python .Net CLR and Runtime for usage by Python x86 2.7</description>
+    <projectUrl>http://pythonnet.sourceforge.net/</projectUrl>
+    <tags>pythonnet python</tags>
+    <copyright></copyright>
+    <licenseUrl>http://pythonnet.sourceforge.net/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!--<iconUrl>https://raw.github.com/__CHOCO_PKG_OWNER_REPO__/master/__NAME__/__NAME__.png</iconUrl>-->
+    <dependencies>
+      <dependency id="python.x86" version="2.7.6" />
+    </dependencies>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
+
