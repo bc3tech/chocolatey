@@ -1,0 +1,1 @@
+Install-ChocolateyPackage -packagename 'VisualStudio14' -filetype exe -url 'http://download.microsoft.com/download/A/3/F/A3F9ABF8-9AF3-4F64-BD3C-F7ECA64EBA48/vs_professional.exe'
