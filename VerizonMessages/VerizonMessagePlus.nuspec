@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>VerizonMessagePlus</id>
-        <version>1.0</version>
+        <version>1.0.0.1</version>
         <title>Verizon Message+</title>
         <authors>BC3Tech,Verizon Wireless</authors>
         <owners>BC3Tech</owners>
@@ -14,9 +14,7 @@
         <releaseNotes />
         <copyright />
         <tags>verizon sms</tags>
-        <dependencies>
-            <dependency id="python.x86" version="2.7.6" />
-        </dependencies>
+        <dependencies />
     </metadata>
     <files>
         <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
