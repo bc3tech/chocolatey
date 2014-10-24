@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>BingBar</id>
+        <version>7.3.126</version>
+        <title>Bing Toolbar</title>
+        <authors>BC3Tech,Microsoft</authors>
+        <owners>BC3Tech</owners>
+        <projectUrl>http://www.bingtoolbar.com/en-US</projectUrl>
+        <iconUrl>http://www.bing.com/th?id=AQK0DyuKn%252bLKGKw300C300&amp;w=110&amp;h=110&amp;c=7&amp;rs=1&amp;qlt=80&amp;pcl=f9f9f9&amp;cdv=1&amp;pid=16.1</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>The Bing Toolbar for Internet Explorer</description>
+        <summary />
+        <releaseNotes />
+        <copyright />
+        <language>en-US</language>
+        <tags>bingbar bing microsoft</tags>
+    </metadata>
+    <files>
+        <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+    </files>
+</package>
