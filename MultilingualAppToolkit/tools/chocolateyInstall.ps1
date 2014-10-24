@@ -1,0 +1,1 @@
+Install-ChocolateyPackage -packagename 'MultilingualAppToolkit' -filetype msi -url 'http://download.microsoft.com/download/3/2/4/324B517B-F5A3-480A-AAE0-DDB522358E96/MultilingualAppToolkit.msi' -silentargs '/passive'
