@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>DoNotTrackMe-IE</id>
+        <version>3.2.1166</version>
+        <title>Do Not Track Me for IE</title>
+        <authors>BC3Tech,Abine</authors>
+        <owners>BC3Tech</owners>
+        <projectUrl>https://dnt.abine.com/#dashboard</projectUrl>
+        <iconUrl>http://blog.static.abine.com/blog/wp-content/uploads/2012/12/DoNotTrackMe_512x512-no-Abine.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>The Do Not Track Me addon for Internet Explorer</description>
+        <summary />
+        <releaseNotes />
+        <copyright />
+        <language />
+        <tags>donottrackme abine</tags>
+    </metadata>
+    <files>
+        <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+    </files>
+</package>
