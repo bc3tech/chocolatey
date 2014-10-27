@@ -13,8 +13,7 @@
         <summary />
         <releaseNotes />
         <copyright />
-        <tags>visualstudio microsoft "visual studio"</tags>
-        <dependencies />
+        <tags>visualstudio microsoft</tags>
     </metadata>
     <files>
         <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
