@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>TelerikControlPanel</id>
+        <version>2014.3.1017</version>
+        <title>Telerik Control Panel</title>
+        <authors>BC3Tech,Telerik</authors>
+        <owners>BC3Tech</owners>
+        <projectUrl>http://www.telerik.com</projectUrl>
+        <iconUrl>https://d585tldpucybw.cloudfront.net/sfimages/default-source/logos/telerik-logo-reversed.png?sfvrsn=2</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>The Telerik Control Panel - your one-stop-shop for installing the Telerik tools for your account</description>
+        <summary />
+        <releaseNotes />
+        <copyright />
+        <tags>telerik</tags>
+    </metadata>
+    <files>
+        <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+    </files>
+</package>
