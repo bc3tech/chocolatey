@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Microsoft-Band-Sync</id>
+        <version>1.3.1021.3</version>
+        <title>Microsoft Band Sync App</title>
+        <authors>BC3Tech,Microsoft</authors>
+        <owners>BC3Tech</owners>
+        <projectUrl>http://microsoft.com/band</projectUrl>
+        <iconUrl>http://cdn.marketplaceimages.windowsphone.com/v8/images/e8cde0b2-06cf-4575-8629-aafb56075bf8?imageType=ws_icon_large</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>The Microsoft Band Sync app for Windows seamlessly syncs your Band to the cloud with the same account that you use from your phone companion app.</description>
+        <summary />
+        <releaseNotes />
+        <copyright />
+        <language />
+        <tags>microsoft microsoftband</tags>
+    </metadata>
+    <files>
+        <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+    </files>
+</package>
