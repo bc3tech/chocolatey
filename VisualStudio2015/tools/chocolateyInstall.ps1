@@ -1,0 +1,1 @@
+Install-ChocolateyPackage -packagename 'visualstudio2015' -filetype exe -url 'http://download.microsoft.com/download/4/A/0/4A0D63BC-0F59-45E3-A0FF-9019285B3BC5/vs_ultimate.exe' -silentargs '/passive /norestart'

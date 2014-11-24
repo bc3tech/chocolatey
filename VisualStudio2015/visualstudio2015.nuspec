@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>visualstudio2015</id>
+        <version>14.0.22310.1</version>
+        <title>Visual Studio 2015 Ultimate Preview</title>
+        <authors>BC3Tech,Microsoft</authors>
+        <owners>BC3Tech</owners>
+        <projectUrl>http://www.visualstudio.com/en-us/downloads/visual-studio-2015-downloads-vs</projectUrl>
+        <iconUrl>https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpa1/v/t1.0-1/p160x160/10645181_1535572983339794_2119516063725803854_n.png?oh=e37a08645ad70a07ad00209bb1da2b63&amp;oe=54E5472C&amp;__gda__=1421407022_480390bf9942868c6f581669f120981a</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Visual Studio 2015 Ultimate Preview</description>
+        <summary />
+        <releaseNotes />
+        <copyright />
+        <tags>visualstudio microsoft</tags>
+    </metadata>
+    <files>
+        <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+    </files>
+</package>
