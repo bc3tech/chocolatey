@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+    <metadata>
+        <id>CShell</id>
+        <version>$version$</version>
+        <title>CShell</title>
+        <authors>bc3tech,luke buehler</authors>
+        <owners>luke buehler</owners>
+        <licenseUrl>https://github.com/lukebuehler/CShell/tree/master/Doc</licenseUrl>
+        <projectUrl>https://github.com/lukebuehler/CShell</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>CShell is an interactive C# scripting environment. It allows you to use C# without any fluff right in a console like environment called a read-eval-print-loop (REPL). Your code is directly evaluated and executed in a shell window, no separate executable has to be compiled and then run in a different process.</description>
+        <summary>CShell is an interactive C# scripting environment.</summary>
+        <releaseNotes>Initial reelase</releaseNotes>
+        <copyright>Copyright 2014</copyright>
+        <language>es-US</language>
+        <tags>cshell csharp scriptcs dotnet visualstudio</tags>
+        <dependencies>
+            <group targetFramework=".NETFramework4.5" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="tools\net45\chocolateyInstall.ps1" target="tools\net45\chocolateyInstall.ps1" />
+        <file src="tools\net45\chocolateyUninstall.ps1" target="tools\net45\chocolateyUninstall.ps1" />
+	</files>
+</package>
