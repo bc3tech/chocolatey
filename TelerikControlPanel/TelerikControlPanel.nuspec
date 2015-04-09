@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>TelerikControlPanel</id>
-        <version>2014.3.1017</version>
+        <version>2015.2.213</version>
         <title>Telerik Control Panel</title>
         <authors>BC3Tech,Telerik</authors>
         <owners>BC3Tech</owners>
@@ -17,5 +17,6 @@
     </metadata>
     <files>
         <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+        <file src="tools\chocolateyUninstall.ps1" target="tools\chocolateyUninstall.ps1" />
     </files>
 </package>
