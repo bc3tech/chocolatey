@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>MultilingualAppToolkit</id>
-        <version>3.1.1085</version>
+        <version>3.1.1250</version>
         <title>Multilingual App Toolkit Visual Studio Extension</title>
         <authors>BC3Tech,Microsoft</authors>
         <owners>BC3Tech</owners>
@@ -18,5 +18,6 @@
     </metadata>
     <files>
         <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+        <file src="tools\chocolateyUninstall.ps1" target="tools\chocolateyUninstall.ps1" />
     </files>
 </package>
