@@ -1,1 +1,1 @@
-Install-ChocolateyPackage -packagename 'BingBar' -filetype exe -url 'http://download.microsoft.com/download/A/3/5/A351612B-4ED8-47F8-996D-7A5C23A9ED1E/BingBar/en/BingBarSetup.EXE' -silentargs '/q'
+Install-ChocolateyPackage -packagename 'BingBar' -filetype exe -url 'http://download.microsoft.com/download/8/9/F/89F00D34-F40E-47CC-8853-A638A6857B04/BingBar/en/BingBarSetup.EXE' -silentargs '/q'
