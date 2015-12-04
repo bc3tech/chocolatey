@@ -1,15 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>MultilingualAppToolkit</id>
-        <version>3.1.1250</version>
+        <version>4.0.1466-beta</version>
         <title>Multilingual App Toolkit Visual Studio Extension</title>
         <authors>BC3Tech,Microsoft</authors>
         <owners>BC3Tech</owners>
-        <projectUrl>https://visualstudiogallery.msdn.microsoft.com/5e2a913c-709c-44e6-8b90-a552eede1903</projectUrl>
-        <iconUrl>https://i1.visualstudiogallery.msdn.s-msft.com/6dab9154-a7e1-46e4-bbfa-18b5e81df520/image/file/143699/1/loctool_logo_48.png</iconUrl>
+        <projectUrl>https://visualstudiogallery.msdn.microsoft.com/6dab9154-a7e1-46e4-bbfa-18b5e81df520</projectUrl>
+        <iconUrl>https://i1.visualstudiogallery.msdn.s-msft.com/5e2a913c-709c-44e6-8b90-a552eede1903/image/file/92545/2/loctool_logo_48.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>The Multilingual App Toolkit extension for Visual Studio 2012, 2013, and "14"</description>
+        <description>The Multilingual App Toolkit v4.0 extension (beta) for Visual Studio 2012, 2013, and 2015</description>
         <summary />
         <releaseNotes />
         <copyright />
