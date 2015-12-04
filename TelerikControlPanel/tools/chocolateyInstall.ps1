@@ -1,1 +1,1 @@
-Install-ChocolateyPackage -packagename 'TelerikControlPanel' exe -url 'https://www.telerik.com/downloads/productfiles/btgbe/TelerikControlPanelSetup_2014_3_1017.exe'
+Install-ChocolateyPackage -packagename 'TelerikControlPanel' exe -url 'https://www.telerik.com/downloads/productfiles/caaed/TelerikControlPanelSetup_2015_9_1124_3.exe'
