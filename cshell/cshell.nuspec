@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
     <metadata>
         <id>CShell</id>
@@ -11,8 +11,7 @@
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>CShell is an interactive C# scripting environment. It allows you to use C# without any fluff right in a console like environment called a read-eval-print-loop (REPL). Your code is directly evaluated and executed in a shell window, no separate executable has to be compiled and then run in a different process.</description>
         <summary>CShell is an interactive C# scripting environment.</summary>
-        <releaseNotes>Initial reelase</releaseNotes>
-        <copyright>Copyright 2014</copyright>
+        <copyright>Copyright 2015</copyright>
         <language>es-US</language>
         <tags>cshell csharp scriptcs dotnet visualstudio</tags>
         <dependencies>
