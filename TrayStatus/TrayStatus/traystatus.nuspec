@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
+    <id>traystatus</id>
+    <title>TrayStatus</title>
+    <version>2.0</version>
+    <authors>Binary Fortress</authors>
+    <owners>bc3tech</owners>
+    <summary>CapsLock, NumLock and ScrollLock Status in your Tray</summary>
+    <description>CapsLock, NumLock and ScrollLock Status in your Tray 
+    </description>
+    <projectUrl>https://www.binaryfortress.com/TrayStatus/</projectUrl>
+    <!--<projectSourceUrl></projectSourceUrl>
+    <docsUrl></docsUrl>
+    <mailingListUrl></mailingListUrl>
+    <bugTrackerUrl></bugTrackerUrl>-->
+    <tags>traystatus</tags>
+    <copyright></copyright>
+    <licenseUrl>https://www.binaryfortress.com/TrayStatus/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://www.binaryfortress.com/ImagesCommon/Icons/64x64/TrayStatus.png</iconUrl>
+    <dependencies>
+      <dependency id="TrayStatus.Install" />
+    </dependencies>
+    <releaseNotes></releaseNotes>
+    <!--<provides></provides>-->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
