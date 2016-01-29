@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>MultilingualAppToolkit</id>
-        <version>4.0.1466-beta</version>
+        <version>4.0.1563-beta</version>
         <title>Multilingual App Toolkit Visual Studio Extension</title>
         <authors>BC3Tech,Microsoft</authors>
         <owners>BC3Tech</owners>
