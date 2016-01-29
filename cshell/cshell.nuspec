@@ -4,22 +4,21 @@
         <id>CShell</id>
         <version>$version$</version>
         <title>CShell</title>
-        <authors>bc3tech,luke buehler</authors>
-        <owners>luke buehler</owners>
+        <authors>lukebuehler</authors>
+        <owners>bc3tech, luke buehler</owners>
         <licenseUrl>https://github.com/lukebuehler/CShell/tree/master/Doc</licenseUrl>
         <projectUrl>https://github.com/lukebuehler/CShell</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>CShell is an interactive C# scripting environment. It allows you to use C# without any fluff right in a console like environment called a read-eval-print-loop (REPL). Your code is directly evaluated and executed in a shell window, no separate executable has to be compiled and then run in a different process.</description>
         <summary>CShell is an interactive C# scripting environment.</summary>
-        <copyright>Copyright 2015</copyright>
-        <language>es-US</language>
+        <copyright>Copyright 2016</copyright>
         <tags>cshell csharp scriptcs dotnet visualstudio</tags>
-        <dependencies>
-            <group targetFramework=".NETFramework4.5" />
-        </dependencies>
+		<dependencies>
+		  <dependency id="dotnet4.5" />
+		</dependencies>
+		<releaseNotes>Changed dependency to Chocolatey .Net 4.5 pkg</releaseNotes>
     </metadata>
     <files>
-        <file src="tools\net45\chocolateyInstall.ps1" target="tools\net45\chocolateyInstall.ps1" />
-        <file src="tools\net45\chocolateyUninstall.ps1" target="tools\net45\chocolateyUninstall.ps1" />
+		<file src="tools\**" target="tools" />
 	</files>
 </package>

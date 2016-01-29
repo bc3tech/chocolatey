@@ -16,7 +16,6 @@
     <dependencies>
       <dependency id="python.x86" version="[2.7,2.8)" />
     </dependencies>
-    <releaseNotes></releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
