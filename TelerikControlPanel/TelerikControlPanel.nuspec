@@ -2,18 +2,16 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>TelerikControlPanel</id>
-        <version>2015.9.1124.3</version>
+        <version>2016.1.0127.1</version>
         <title>Telerik Control Panel</title>
-        <authors>BC3Tech,Telerik</authors>
+        <authors>Telerik</authors>
         <owners>BC3Tech</owners>
         <projectUrl>http://www.telerik.com</projectUrl>
         <iconUrl>https://cdn.rawgit.com/TomOne/various/79795ad801c89ad0fc57c8e9266628b286e6aefa/telerik.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>The Telerik Control Panel - your one-stop-shop for installing the Telerik tools for your account</description>
         <summary />
-        <releaseNotes />
-        <copyright />
-        <tags>telerik</tags>
+        <tags>telerik admin</tags>
     </metadata>
     <files>
         <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
