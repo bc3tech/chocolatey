@@ -1,1 +1,1 @@
-Install-ChocolateyZipPackage 'pythonnet' 'http://www.bc3tech.net/pythonnet/pythonnet-1.zip' 'c:\python27'
+Install-ChocolateyZipPackage 'pythonnet' 'http://www.bc3tech.net/pythonnet/pythonnet-2.1.0-dev1-x86.zip' 'c:\python27'

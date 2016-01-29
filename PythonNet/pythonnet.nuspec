@@ -3,19 +3,18 @@
   <metadata>
     <id>pythonnet</id>
     <title>Python .Net</title>
-    <version>1.01</version>
-    <authors>BC3Tech,Brian Lloyd</authors>
+    <version>2.1.0-dev1</version>
+    <authors>Tony Roberts</authors>
     <owners>BC3Tech</owners>
     <summary>Python .Net clr and runtime</summary>
-    <description>Contains the Python .Net CLR and Runtime for usage by Python x86 2.7</description>
-    <projectUrl>http://pythonnet.sourceforge.net/</projectUrl>
+    <description>Contains the Python .Net CLR and Runtime for usage by Python x86 2.7.x</description>
+    <projectUrl>https://github.com/pythonnet/pythonnet</projectUrl>
+    <projectSourceUrl>https://github.com/pythonnet/pythonnet</projectSourceUrl>
     <tags>pythonnet python</tags>
-    <copyright></copyright>
-    <licenseUrl>http://pythonnet.sourceforge.net/</licenseUrl>
+    <licenseUrl>https://github.com/pythonnet/pythonnet/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<iconUrl>https://raw.github.com/__CHOCO_PKG_OWNER_REPO__/master/__NAME__/__NAME__.png</iconUrl>-->
     <dependencies>
-      <dependency id="python.x86" version="2.7.6" />
+      <dependency id="python.x86" version="[2.7,2.8)" />
     </dependencies>
     <releaseNotes></releaseNotes>
   </metadata>
