@@ -17,17 +17,11 @@
     <docsUrl></docsUrl>
     <mailingListUrl></mailingListUrl>
     <bugTrackerUrl></bugTrackerUrl>-->
-    <tags>realvnc vnc</tags>
-    <copyright>2016</copyright>
+    <tags>realvnc vnc admin</tags>
+    <copyright>© 2002-2016 RealVNC Limited. All rights reserved.</copyright>
     <licenseUrl>http://www.realvnc.com/products/vnc/documentation/5.3/licensing-faq/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://www.realvnc.com/assets/img/logo.png</iconUrl>
-    <!--<dependencies>
-      <dependency id="" version="__VERSION__" />
-      <dependency id="" />
-    </dependencies>-->
-    <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
-    <!--<provides></provides>-->
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
