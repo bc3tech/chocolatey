@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
+    <id>gitter</id>
+    <title>Gitter (Install)</title>
+    <version>2.4.0</version>
+    <authors>Troupe Technology Ltd</authors>
+    <owners>bc3tech</owners>
+    <summary>Gitter is home to over 25,000 developer communities. Our free public service allows unlimited users, unlimited history and unlimited integrations.</summary>
+	<description>Gitter is home to over 25,000 developer communities. Our free public service allows unlimited users, unlimited history and unlimited integrations.</description>
+    <projectUrl>https://gitter.im</projectUrl>
+    <tags>gitter admin github</tags>
+    <copyright>© 2016 Troupe Technology Ltd. All rights reserved.</copyright>
+    <licenseUrl>https://gitter.zendesk.com/hc/en-us/articles/200944641-Terms-of-Service</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://avatars1.githubusercontent.com/gitterHQ</iconUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
