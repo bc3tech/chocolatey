@@ -47,7 +47,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <docsUrl>http://www.phraseexpress.com/docs11/09/manual.htm</docsUrl>
     <!--<mailingListUrl></mailingListUrl>-->
     <!--<bugTrackerUrl></bugTrackerUrl>-->
-    <tags>phraseexpress.install admin</tags>
+    <tags>phraseexpress admin</tags>
     <summary>A Text Expander for Windows - No more typing common phrases again!</summary>
     <description>- Organize frequently used text snippets.
 - Expand abbreviations in any program.
