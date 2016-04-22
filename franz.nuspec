@@ -34,15 +34,15 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
-    <title>franz (Install)</title>
-    <authors>__REPLACE_AUTHORS_OF_SOFTWARE_COMMA_SEPARATED__</authors>
+    <title>Franz (Install)</title>
+    <authors>Stefan Malzner, Jonathan Burke</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>http://meetfranz.com</projectUrl>
     <iconUrl>https://storage.googleapis.com/franz-1245.appspot.com/build-assets/win-app-ico.ico</iconUrl>
     <copyright>Copyright (c) 2016 Meet Franz (Stefan Malzner &amp; Jonathan Burke)</copyright>
     <!-- If there is a license Url available, it is is required for the community feed -->
-    <!-- <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl>
-    <requireLicenseAcceptance>true</requireLicenseAcceptance>-->
+    <licenseUrl>http://www.meetfranz.com/terms.html</licenseUrl>
+    <!--<requireLicenseAcceptance>true</requireLicenseAcceptance>-->
     <!-- <projectSourceUrl></projectSourceUrl> -->
     <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
     <!--<mailingListUrl></mailingListUrl>-->
@@ -50,7 +50,20 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <tags>franz Slack HipChat Facebook Telegram WhatsApp WeChat Google Skype GroupMe ChatWork Gitter Discord Steam Grape</tags>
     <summary>Franz is a free messaging app / former Emperor of Austria and combines chat &amp; messaging services into one application.</summary>
     <description>He currently supports Slack, WhatsApp, WeChat, HipChat, Facebook Messenger, Telegram, Google Hangouts, GroupMe, Skype and many more.</description>
-    <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
+    <releaseNotes>- Added ChatWork integration
+- Added Gitter integration
+- Added Discord integration
+- Added Steam Chat integration
+- Added option to mute audio
+- Added voice/video calls to Slack and Facebook Messenger
+- Added zoom in/out for services
+- Fixed tab switch shortcut does not override text selection
+- Fixed Franz license
+- [Windows] Added installer certificate
+- [Windows] Added taskbar message badge 
+- [Windows 7+8] Improved notifications
+- [Windows + Linux] Added minimize to system tray
+- [Windows + Linux] Fixed scrolling problems	</releaseNotes>
     <!-- =============================== -->      
 
     <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
