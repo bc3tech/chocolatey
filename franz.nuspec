@@ -26,10 +26,10 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- version should MATCH as closely as possible with the underlying software -->
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-    <version>__REPLACE__</version>
-    <!-- <packageSourceUrl>Where is this Chocolatey package located (think GitHub)? packageSourceUrl is highly recommended for the community feed</packageSourceUrl>-->
+    <version>0.9.10-beta</version>
+    <packageSourceUrl>http://github.com/bc3tech/choco-franz</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
-    <!--<owners>__REPLACE_YOUR_NAME__</owners>-->
+    <owners>bc3tech</owners>
     <!-- ============================== -->
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -37,19 +37,19 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <title>franz (Install)</title>
     <authors>__REPLACE_AUTHORS_OF_SOFTWARE_COMMA_SEPARATED__</authors>
     <!-- projectUrl is required for the community feed -->
-    <projectUrl>https://_Software_Location_REMOVE_OR_FILL_OUT_</projectUrl>
-    <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/franz.png</iconUrl>-->
-    <!-- <copyright>Year Software Vendor</copyright> -->
+    <projectUrl>http://meetfranz.com</projectUrl>
+    <iconUrl>https://storage.googleapis.com/franz-1245.appspot.com/build-assets/win-app-ico.ico</iconUrl>
+    <copyright>Copyright (c) 2016 Meet Franz (Stefan Malzner &amp; Jonathan Burke)</copyright>
     <!-- If there is a license Url available, it is is required for the community feed -->
     <!-- <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>-->
-    <!--<projectSourceUrl>Software Source Location - is the software FOSS somewhere? Link to it with this</projectSourceUrl>-->
+    <!-- <projectSourceUrl></projectSourceUrl> -->
     <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
     <!--<mailingListUrl></mailingListUrl>-->
     <!--<bugTrackerUrl></bugTrackerUrl>-->
-    <tags>franz admin SPACE_SEPARATED</tags>
-    <summary>__REPLACE__</summary>
-    <description>__REPLACE__MarkDown_Okay </description>
+    <tags>franz Slack HipChat Facebook Telegram WhatsApp WeChat Google Skype GroupMe ChatWork Gitter Discord Steam Grape</tags>
+    <summary>Franz is a free messaging app / former Emperor of Austria and combines chat &amp; messaging services into one application.</summary>
+    <description>He currently supports Slack, WhatsApp, WeChat, HipChat, Facebook Messenger, Telegram, Google Hangouts, GroupMe, Skype and many more.</description>
     <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
     <!-- =============================== -->      
 
