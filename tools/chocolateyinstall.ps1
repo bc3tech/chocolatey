@@ -7,22 +7,22 @@ $ErrorActionPreference = 'Stop'; # stop on all errors
 
 $packageName= 'franz' # arbitrary name for the package, used in messages
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = '' # download url
-$url64      = '' # 64bit URL here or remove - if installer is both, use $url
+$url        = 'http://downloads.meetfranz.com/releases/0.9.10/Franz-win32-ia32-0.9.10.zip' # download url
+$url64      = 'http://downloads.meetfranz.com/releases/0.9.10/Franz-win32-x64-0.9.10.zip' # 64bit URL here or remove - if installer is both, use $url
 #$fileLocation = Join-Path $toolsDir 'NAME_OF_EMBEDDED_INSTALLER_FILE'
 #$fileLocation = '\\SHARE_LOCATION\to\INSTALLER_FILE'
 
 $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $toolsDir
-  fileType      = 'EXE_MSI_OR_MSU' #only one of these: exe, msi, msu
+  fileType      = 'EXE' #only one of these: exe, msi, msu
   url           = $url
   url64bit      = $url64
   #file         = $fileLocation
 
   #MSI
-  silentArgs    = "/qn /norestart /l*v `"$env:TEMP\chocolatey\$($packageName)\$($packageName).MsiInstall.log`"" # ALLUSERS=1 DISABLEDESKTOPSHORTCUT=1 ADDDESKTOPICON=0 ADDSTARTMENU=0
-  validExitCodes= @(0, 3010, 1641)
+  # silentArgs    = "/qn /norestart /l*v `"$env:TEMP\chocolatey\$($packageName)\$($packageName).MsiInstall.log`"" # ALLUSERS=1 DISABLEDESKTOPSHORTCUT=1 ADDDESKTOPICON=0 ADDSTARTMENU=0
+  # validExitCodes= @(0, 3010, 1641)
   #OTHERS
   # Uncomment matching EXE type (sorted by most to least common)
   #silentArgs   = '/S'           # NSIS
@@ -34,7 +34,7 @@ $packageArgs = @{
   #silentArgs   = '-q'           # Install4j
   #silentArgs   = '-s -u'        # Ghost
   # Note that some installers, in addition to the silentArgs above, may also need assistance of AHK to achieve silence.
-  #silentArgs   = ''             # none; make silent with input macro script like AutoHotKey (AHK)
+  silentArgs   = ''             # none; make silent with input macro script like AutoHotKey (AHK)
                                  #       https://chocolatey.org/packages/autohotkey.portable
   #validExitCodes= @(0) #please insert other valid exit codes here
 
@@ -46,7 +46,7 @@ $packageArgs = @{
   checksumType64= 'md5' #default is checksumType
 }
 
-Install-ChocolateyPackage @packageArgs
+# Install-ChocolateyPackage @packageArgs
 #Install-ChocolateyZipPackage @packageArgs
 # if you are making your own internal packages (organizations), you can embed the installer or 
 # put on internal file share and use the following instead (you'll need to add $file to the above)
@@ -70,14 +70,13 @@ Install-ChocolateyPackage @packageArgs
 
 # downloader that the main helpers use to download items
 # if removing $url64, please remove from here
-#Get-ChocolateyWebFile $packageName 'DOWNLOAD_TO_FILE_FULL_PATH' $url $url64
+$dlFileLoc = Get-ChocolateyWebFile $packageName ($toolsDir + 'franzInstall') $url $url64
 
 # installer, will assert administrative rights - used by Install-ChocolateyPackage
 # use this for embedding installers in the package when not going to community feed or when you have distribution rights
 #Install-ChocolateyInstallPackage $packageName $fileType $silentArgs '_FULLFILEPATH_' -validExitCodes $validExitCodes
 
 # unzips a file to the specified location - auto overwrites existing content
-#Get-ChocolateyUnzip "FULL_LOCATION_TO_ZIP.zip" $toolsDir
 
 # Runs processes asserting UAC, will assert administrative rights - used by Install-ChocolateyInstallPackage
 #Start-ChocolateyProcessAsAdmin 'STATEMENTS_TO_RUN' 'Optional_Application_If_Not_PowerShell' -validExitCodes $validExitCodes
@@ -90,7 +89,10 @@ Install-ChocolateyPackage @packageArgs
 # Install-ChocolateyShortcut -shortcutFilePath "<path>" -targetPath "<path>" [-workDirectory "C:\" -arguments "C:\test.txt" -iconLocation "C:\test.ico" -description "This is the description"]
 
 # outputs the bitness of the OS (either "32" or "64")
-#$osBitness = Get-ProcessorBits
+Get-ChocolateyUnzip $dlFileLoc ($toolsDir + 'franz')
+
+cd ($toolsDir + 'franz')
+.\ FranzSetup.exe
 
 #Install-ChocolateyEnvironmentVariable -variableName "SOMEVAR" -variableValue "value" [-variableType = 'Machine' #Defaults to 'User']
 
