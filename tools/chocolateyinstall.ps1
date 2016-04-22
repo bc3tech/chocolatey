@@ -11,6 +11,7 @@ $url        = 'http://downloads.meetfranz.com/releases/0.9.10/Franz-win32-ia32-0
 $url64      = 'http://downloads.meetfranz.com/releases/0.9.10/Franz-win32-x64-0.9.10.zip' # 64bit URL here or remove - if installer is both, use $url
 #$fileLocation = Join-Path $toolsDir 'NAME_OF_EMBEDDED_INSTALLER_FILE'
 #$fileLocation = '\\SHARE_LOCATION\to\INSTALLER_FILE'
+$fileType = 'EXE'
 
 $packageArgs = @{
   packageName   = $packageName
@@ -30,11 +31,11 @@ $packageArgs = @{
   #silentArgs   = '/s'           # InstallShield
   #silentArgs   = '/s /v"/qn"' # InstallShield with MSI
   #silentArgs   = '/s'           # Wise InstallMaster
-  #silentArgs   = '-s'           # Squirrel
+  silentArgs   = '-s'           # Squirrel
   #silentArgs   = '-q'           # Install4j
   #silentArgs   = '-s -u'        # Ghost
   # Note that some installers, in addition to the silentArgs above, may also need assistance of AHK to achieve silence.
-  silentArgs   = ''             # none; make silent with input macro script like AutoHotKey (AHK)
+  # silentArgs   = ''             # none; make silent with input macro script like AutoHotKey (AHK)
                                  #       https://chocolatey.org/packages/autohotkey.portable
   #validExitCodes= @(0) #please insert other valid exit codes here
 
@@ -60,7 +61,7 @@ $packageArgs = @{
 ##Install-ChocolateyPackage $packageName $fileType $silentArgs $url [$url64 -validExitCodes $validExitCodes -checksum $checksum -checksumType $checksumType -checksum64 $checksum64 -checksumType64 $checksumType64]
 
 ## Download and unpack a zip file
-##Install-ChocolateyZipPackage $packageName $url $toolsDir [$url64 -checksum $checksum -checksumType $checksumType -checksum64 $checksum64 -checksumType64 $checksumType64]
+$zipInstallDir = Install-ChocolateyZipPackage $packageName $url $toolsDir $url64
 
 ## Install Visual Studio Package
 #Install-ChocolateyVsixPackage $packageName $url [$vsVersion] [-checksum $checksum -checksumType $checksumType]
@@ -70,11 +71,11 @@ $packageArgs = @{
 
 # downloader that the main helpers use to download items
 # if removing $url64, please remove from here
-$dlFileLoc = Get-ChocolateyWebFile $packageName ($toolsDir + 'franzInstall') $url $url64
+# $dlFileLoc = Get-ChocolateyWebFile $packageName ($toolsDir + 'franzInstall') $url $url64
 
 # installer, will assert administrative rights - used by Install-ChocolateyPackage
 # use this for embedding installers in the package when not going to community feed or when you have distribution rights
-#Install-ChocolateyInstallPackage $packageName $fileType $silentArgs '_FULLFILEPATH_' -validExitCodes $validExitCodes
+Install-ChocolateyInstallPackage $packageName $fileType $silentArgs ($zipInstallDir + "\FranzSetup.exe")
 
 # unzips a file to the specified location - auto overwrites existing content
 
@@ -89,10 +90,10 @@ $dlFileLoc = Get-ChocolateyWebFile $packageName ($toolsDir + 'franzInstall') $ur
 # Install-ChocolateyShortcut -shortcutFilePath "<path>" -targetPath "<path>" [-workDirectory "C:\" -arguments "C:\test.txt" -iconLocation "C:\test.ico" -description "This is the description"]
 
 # outputs the bitness of the OS (either "32" or "64")
-Get-ChocolateyUnzip $dlFileLoc ($toolsDir + 'franz')
+# Get-ChocolateyUnzip $dlFileLoc ($toolsDir + 'franz')
 
-cd ($toolsDir + 'franz')
-.\ FranzSetup.exe
+# cd ($toolsDir + 'franz')
+# .\ FranzSetup.exe
 
 #Install-ChocolateyEnvironmentVariable -variableName "SOMEVAR" -variableValue "value" [-variableType = 'Machine' #Defaults to 'User']
 
