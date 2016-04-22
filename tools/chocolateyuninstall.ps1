@@ -10,8 +10,8 @@ $ErrorActionPreference = 'Stop'; # stop on all errors
 
 $packageName = 'franz'
 $softwareName = 'franz*' #part or all of the Display Name as you see it in Programs and Features. It should be enough to be unique
-$installerType = 'MSI' 
-#$installerType = 'EXE' 
+# $installerType = 'MSI' 
+$installerType = 'EXE' 
 
 $silentArgs = '/qn /norestart'
 # https://msdn.microsoft.com/en-us/library/aa376931(v=vs.85).aspx
@@ -24,7 +24,7 @@ if ($installerType -ne 'MSI') {
   #$silentArgs = '/s'           # InstallShield
   #$silentArgs = '/s /v"/qn"' # InstallShield with MSI
   #$silentArgs = '/s'           # Wise InstallMaster
-  #$silentArgs = '-s'           # Squirrel
+  $silentArgs = '-s'           # Squirrel
   #$silentArgs = '-q'           # Install4j
   #$silentArgs = '-s -u'        # Ghost
   # Note that some installers, in addition to the silentArgs above, may also need assistance of AHK to achieve silence.
