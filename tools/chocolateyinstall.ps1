@@ -75,7 +75,8 @@ $zipInstallDir = Install-ChocolateyZipPackage $packageName $url $toolsDir $url64
 
 # installer, will assert administrative rights - used by Install-ChocolateyPackage
 # use this for embedding installers in the package when not going to community feed or when you have distribution rights
-Install-ChocolateyInstallPackage $packageName $fileType $silentArgs ($zipInstallDir + "\FranzSetup.exe")
+$fileInstallLocation = Join-Path $zipInstallDir 'FranzSetup.exe'
+Install-ChocolateyInstallPackage $packageName $fileType $silentArgs "$fileInstallLocation"
 
 # unzips a file to the specified location - auto overwrites existing content
 
