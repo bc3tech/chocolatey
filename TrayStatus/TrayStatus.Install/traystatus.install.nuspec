@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>traystatus.install</id>
     <title>TrayStatus (Install)</title>
-    <version>2.0</version>
+    <version>2.0.2</version>
     <authors>Binary Fortress</authors>
     <owners>bc3tech</owners>
     <summary>CapsLock, NumLock and ScrollLock Status in your Tray</summary>
@@ -26,7 +26,14 @@
       <dependency id="" version="__VERSION__" />
       <dependency id="" />
     </dependencies>-->
-    <releaseNotes></releaseNotes>
+    <releaseNotes>v2.0.2 • May 12, 2016
+Change: Now targeting the .NET Framework 4.0, which will automatically install during setup if needed
+
+v2.0.1 • March 13, 2016
+Change: Updater improvements
+Change: General performance and stability improvements
+Change: Code signing now uses SHA256 for compatibility with future Windows Updates
+Change: Added an "Our Apps" tab to the settings window with details about other great Binary Fortress apps (you can disable this tab in the Advanced Settings if you don't want it)</releaseNotes>
     <!--<provides></provides>-->
   </metadata>
   <files>

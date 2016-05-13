@@ -3,7 +3,7 @@
 
 $packageName= 'TrayStatus' 
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://binaryfortressdownloads.com/Download/BFSFiles/114/TrayStatus-2.0.zip' 
+$url        = 'https://binaryfortressdownloads.com/Download/BFSFiles/114/TrayStatus-2.0.2.zip' 
 
 $packageArgs = @{
   packageName   = $packageName
