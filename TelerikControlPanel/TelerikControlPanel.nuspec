@@ -3,6 +3,7 @@
     <metadata>
         <id>TelerikControlPanel</id>
         <version>2016.1.0127.1</version>
+		<packageSourceUrl>https://github.com/bc3tech/chocolatey/tree/master/TelerikControlPanel</packageSourceUrl>
         <title>Telerik Control Panel</title>
         <authors>Telerik</authors>
         <owners>BC3Tech</owners>

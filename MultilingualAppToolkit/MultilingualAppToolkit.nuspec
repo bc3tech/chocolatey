@@ -3,6 +3,7 @@
     <metadata>
         <id>MultilingualAppToolkit</id>
         <version>4.0.1563-beta</version>
+		<packageSourceUrl>https://github.com/bc3tech/chocolatey/tree/master/MultilingualAppToolkit</packageSourceUrl>
         <title>Multilingual App Toolkit Visual Studio Extension</title>
         <authors>BC3Tech,Microsoft</authors>
         <owners>BC3Tech</owners>

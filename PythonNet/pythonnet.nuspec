@@ -4,6 +4,7 @@
     <id>pythonnet</id>
     <title>Python .Net</title>
     <version>2.1.0-dev1</version>
+	<packageSourceUrl>https://github.com/bc3tech/chocolatey/tree/master/PythonNet</packageSourceUrl>
     <authors>Tony Roberts</authors>
     <owners>BC3Tech</owners>
     <summary>Python .Net clr and runtime</summary>

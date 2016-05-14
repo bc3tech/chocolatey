@@ -3,6 +3,7 @@
     <metadata>
         <id>VerizonMessagePlus</id>
         <version>1.0.0.1</version>
+		<packageSourceUrl>https://github.com/bc3tech/chocolatey/tree/master/VerizonMessages</packageSourceUrl>
         <title>Verizon Message+</title>
         <authors>BC3Tech,Verizon Wireless</authors>
         <owners>BC3Tech</owners>

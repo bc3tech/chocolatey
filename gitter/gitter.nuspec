@@ -6,6 +6,7 @@
     <id>gitter</id>
     <title>Gitter (Install)</title>
     <version>2.4.0</version>
+	<packageSourceUrl>https://github.com/bc3tech/chocolatey/tree/master/gitter</packageSourceUrl>
     <authors>Troupe Technology Ltd</authors>
     <owners>bc3tech</owners>
     <summary>Gitter is home to over 25,000 developer communities. Our free public service allows unlimited users, unlimited history and unlimited integrations.</summary>

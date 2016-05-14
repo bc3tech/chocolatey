@@ -3,6 +3,7 @@
     <metadata>
         <id>Blur-IE</id>
         <version>5.3.1900</version>
+		<packageSourceUrl>https://github.com/bc3tech/chocolatey/tree/master/DoNotTrackMe-IE</packageSourceUrl>
         <title>Blur for IE</title>
         <authors>Abine</authors>
         <owners>BC3Tech</owners>

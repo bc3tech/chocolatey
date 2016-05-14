@@ -6,6 +6,7 @@
     <id>traystatus.install</id>
     <title>TrayStatus (Install)</title>
     <version>2.0.2</version>
+	<packageSourceUrl>https://github.com/bc3tech/chocolatey/tree/master/TrayStatus/TrayStatus.Install</packageSourceUrl>
     <authors>Binary Fortress</authors>
     <owners>bc3tech</owners>
     <summary>CapsLock, NumLock and ScrollLock Status in your Tray</summary>

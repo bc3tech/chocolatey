@@ -3,6 +3,7 @@
     <metadata>
         <id>visualstudio2015</id>
         <version>14.0.22310.1</version>
+		<packageSourceUrl>https://github.com/bc3tech/chocolatey/tree/master/VisualStudio2015</packageSourceUrl>
         <title>Visual Studio 2015 Ultimate Preview</title>
         <authors>BC3Tech,Microsoft</authors>
         <owners>BC3Tech</owners>

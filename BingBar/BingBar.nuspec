@@ -3,6 +3,7 @@
     <metadata>
         <id>BingBar</id>
         <version>7.3.161</version>
+		<packageSourceUrl>https://github.com/bc3tech/chocolatey/tree/master/BingBar</packageSourceUrl>
         <title>Bing Toolbar</title>
         <authors>BC3Tech,Microsoft</authors>
         <owners>BC3Tech</owners>

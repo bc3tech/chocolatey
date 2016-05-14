@@ -3,6 +3,7 @@
     <metadata>
         <id>CShell</id>
         <version>$version$</version>
+		<packageSourceUrl>https://github.com/bc3tech/chocolatey/tree/master/cshell</packageSourceUrl>
         <title>CShell</title>
         <authors>lukebuehler</authors>
         <owners>bc3tech, luke buehler</owners>
