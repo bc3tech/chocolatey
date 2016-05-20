@@ -1,1 +1,1 @@
-Install-ChocolateyPackage -packagename 'DoNotTrackMe-IE' -filetype exe -url 'http://releases.abine.com/dntme/ie/5.3.1900-Prod/installer.exe' -silentargs '/silent /norestart'
+Install-ChocolateyPackage -packagename 'DoNotTrackMe-IE' -filetype exe -url 'http://releases.abine.com/dntme/ie/5.5.1930/installer.exe' -silentargs '/silent /norestart'
