@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>Blur-IE</id>
-        <version>5.3.1930</version>
+        <version>5.5.1930</version>
 		<packageSourceUrl>https://github.com/bc3tech/chocolatey/tree/master/DoNotTrackMe-IE</packageSourceUrl>
         <title>Blur for IE</title>
         <authors>Abine</authors>
@@ -15,7 +15,7 @@
         <releaseNotes />
         <copyright />
         <language />
-        <tags>donottrackme abine blur</tags>
+        <tags>donottrackme abine blur admin</tags>
     </metadata>
     <files>
         <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
