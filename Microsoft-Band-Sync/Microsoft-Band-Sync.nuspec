@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>microsoft-band-sync</id>
-        <version>1.3.1021.3</version>
+        <version>1.3.20517.1</version>
 		<packageSourceUrl>https://github.com/bc3tech/chocolatey/tree/master/Microsoft-Band-Sync</packageSourceUrl>
         <title>Microsoft Band Sync App</title>
         <authors>BC3Tech,Microsoft</authors>
@@ -18,6 +18,6 @@
         <tags>microsoft microsoftband</tags>
     </metadata>
     <files>
-        <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+    <file src="tools\**" target="tools" />
     </files>
 </package>
