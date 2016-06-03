@@ -1,1 +1,2 @@
 .nupkg # don't commit resulting nupkg files from `choco pack`
+*.nupkg
