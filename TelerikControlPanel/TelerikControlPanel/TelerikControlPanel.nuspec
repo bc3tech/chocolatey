@@ -14,7 +14,7 @@
         <summary />
         <tags>telerik admin</tags>
     <dependencies>
-      <dependency id="telerikcontrolpanel.portable" />
+      <dependency id="telerikcontrolpanel.portable" version="[2016.2.0516.1]" />
     </dependencies>
     </metadata>
   <files>
