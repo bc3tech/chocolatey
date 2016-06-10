@@ -4,8 +4,8 @@ $ErrorActionPreference = 'Stop';
 
 $packageName= 'franz'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'http://downloads.meetfranz.com/releases/0.9.10/Franz-win32-ia32-0.9.10.zip'
-$url64      = 'http://downloads.meetfranz.com/releases/0.9.10/Franz-win32-x64-0.9.10.zip'
+$url        = 'https://github.com/imprecision/franz-app/releases/download/3.0.0/Franz-win32-ia32-3.0.0.zip'
+$url64      = 'https://github.com/imprecision/franz-app/releases/download/3.0.0/Franz-win32-x64-3.0.0.zip'
 $fileType = 'EXE'
 
 $packageArgs = @{
