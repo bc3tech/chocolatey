@@ -13,9 +13,11 @@
         <description>The Telerik Control Panel - your one-stop-shop for installing the Telerik tools for your account</description>
         <summary />
         <tags>telerik admin</tags>
+    <dependencies>
+      <dependency id="telerikcontrolpanel.portable" />
+    </dependencies>
     </metadata>
-    <files>
-        <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
-        <file src="tools\chocolateyUninstall.ps1" target="tools\chocolateyUninstall.ps1" />
-    </files>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
