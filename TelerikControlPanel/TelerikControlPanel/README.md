@@ -1,1 +1,0 @@
-https://chocolatey.org/packages/TelerikControlPanel

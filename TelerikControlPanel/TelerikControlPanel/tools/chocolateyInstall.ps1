@@ -1,1 +1,0 @@
-#Install-VirtualPackage 'TelerikControlPanel.portable'
