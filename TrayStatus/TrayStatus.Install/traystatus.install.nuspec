@@ -13,12 +13,11 @@
     <description>CapsLock, NumLock and ScrollLock Status in your Tray 
     </description>
     <projectUrl>https://www.binaryfortress.com/TrayStatus/</projectUrl>
-    <packageSourceUrl>https://www.binaryfortress.com/TrayStatus/</packageSourceUrl>
     <!--<projectSourceUrl></projectSourceUrl>
     <docsUrl></docsUrl>
     <mailingListUrl></mailingListUrl>
     <bugTrackerUrl></bugTrackerUrl>-->
-    <tags>traystatus</tags>
+    <tags>traystatus admin</tags>
     <copyright></copyright>
     <licenseUrl>https://www.binaryfortress.com/TrayStatus/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

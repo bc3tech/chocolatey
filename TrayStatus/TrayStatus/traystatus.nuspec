@@ -17,13 +17,13 @@
     <docsUrl></docsUrl>
     <mailingListUrl></mailingListUrl>
     <bugTrackerUrl></bugTrackerUrl>-->
-    <tags>traystatus</tags>
+    <tags>traystatus admin</tags>
     <copyright></copyright>
     <licenseUrl>https://www.binaryfortress.com/TrayStatus/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://www.binaryfortress.com/ImagesCommon/Icons/64x64/TrayStatus.png</iconUrl>
     <dependencies>
-      <dependency id="TrayStatus.Install" />
+      <dependency id="TrayStatus.Install" version="[2.0.2]" />
     </dependencies>
     <releaseNotes>v2.0.2 • May 12, 2016
 Change: Now targeting the .NET Framework 4.0, which will automatically install during setup if needed
