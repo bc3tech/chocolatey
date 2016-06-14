@@ -7,7 +7,7 @@ $ErrorActionPreference = 'Stop'; # stop on all errors
 
 $packageName= 'TelerikControlPanel.Portable' # arbitrary name for the package, used in messages
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://downloads.cdn.telerik.com/36ad30a0afaab3bf5f3e8c8e3b5830d7_TelerikControlPanelSetup_2016_2_0516_1.exe_2016.2.516.1?Expires=1465659441&Signature=rMYQ1hOf7Ekg9gf-UBX6iiSj8z5cuy778NHMe3t09DJfy0JHXTUj75cWIXOAWfQb5RzTb0kLD7epd5GSmB3vM2~jIg7WHfo1RxTxn-1mSJlEfiazj00TC4BZKj2FL~ZKSF9iqIz62H7PkxflGByt0aXh8J7HRZfQN~7JfgYXDvkm4XGZvQ8SknTiXzAZqaYv34iZ12O1VS0KY3b3AByN2W8b4Mnof14wT1mLjB8kZ3-JgtTwNqW9lEsKh0gXUpMbslC7QEKFyoXKECF9JDhR2tuR1YWdXqA5ozjMcp1QHb5d4dQAUZhJ0HA0s2KXLHFKICx37ClkUJa424lPf6-h~g__&Key-Pair-Id=APKAJILH73OFECZJOO3Q' # download url
+$url        = 'tools\TelerikControlPanelSetup_2016_2_0516_1.exe' # download url
 $url64      = $url #'' # 64bit URL here or remove - if installer contains both (very rare), use $url
 #$fileLocation = Join-Path $toolsDir 'NAME_OF_EMBEDDED_INSTALLER_FILE'
 #$fileLocation = '\\SHARE_LOCATION\to\INSTALLER_FILE'
