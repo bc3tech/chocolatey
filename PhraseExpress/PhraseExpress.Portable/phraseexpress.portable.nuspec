@@ -1,20 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Read this before creating packages: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
-<!-- It is especially important to read the above link to understand additional requirements when publishing packages to the community feed aka dot org (https://chocolatey.org/packages). -->
-
-<!-- Test your packages in a test environment: https://github.com/chocolatey/chocolatey-test-environment -->
-
-<!--
-This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Reference. Chocolatey uses a special version of NuGet.Core that allows us to do more than was initially possible. As such there are certain things to be aware of:
-
-* the package xmlns schema url may cause issues with nuget.exe
-* Any of the following elements can ONLY be used by choco tools - projectSourceUrl, docsUrl, mailingListUrl, bugTrackerUrl, packageSourceUrl, provides, conflicts, replaces 
-* nuget.exe can still install packages with those elements but they are ignored. Any authoring tools or commands will error on those elements 
--->
-
-<!-- You can embed software files directly into packages, as long as you are not bound by distribution rights. -->
-<!-- * If you are an organization making private packages, you probably have no issues here -->
-<!-- * If you are releasing to the community feed, you need to consider distribution rights. -->
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
@@ -27,9 +11,9 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
     <version>11.0.133</version>
-	<packageSourceUrl>https://github.com/bc3tech/chocolatey/tree/master/PhraseExpress.Portable</packageSourceUrl>
+	<packageSourceUrl>https://github.com/bc3tech/chocolatey/tree/master/PhraseExpress/PhraseExpress.Portable</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
-    <!--<owners>__REPLACE_YOUR_NAME__</owners>-->
+    <owners>bc3tech</owners>
     <!-- ============================== -->
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -47,7 +31,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <docsUrl>http://www.phraseexpress.com/docs11/09/manual.htm</docsUrl>
     <!--<mailingListUrl></mailingListUrl>-->
     <!--<bugTrackerUrl></bugTrackerUrl>-->
-    <tags>phraseexpress</tags>
+    <tags>PhraseExpress automation clipboard-manager clipboard-history typing automated-tasks spell-checker macros text-expander macro-recorder autocomplete automation-tool text-replace text-substitution text-snippets</tags>
     <summary>A Text Expander for Windows - No more typing common phrases again!</summary>
     <description>- Organize frequently used text snippets.
 - Expand abbreviations in any program.
@@ -57,20 +41,6 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 - Correct spelling mistakes in any application.
 - Free for personal use</description>
     <releaseNotes>The #mail macro functions works around the Outlook DLL to prevent showing the error message "The operating system is not configured to run this application".</releaseNotes>
-    <!-- =============================== -->      
-
-    <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
-    <!--<dependencies>
-      <dependency id="" version="__MINIMUM_VERSION__" />
-      <dependency id="" version="[__EXACT_VERSION__]" />
-      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_INCLUSIVE]" />
-      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_EXCLUSIVE)" />
-      <dependency id="" />
-    </dependencies>-->
-
-    <!--<provides>NOT YET IMPLEMENTED</provides>-->
-    <!--<conflicts>NOT YET IMPLEMENTED</conflicts>-->
-    <!--<replaces>NOT YET IMPLEMENTED</replaces>-->
   </metadata>
   <files>
     <!-- this section controls what actually gets packaged into the Chocolatey package -->
