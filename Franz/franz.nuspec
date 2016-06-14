@@ -34,7 +34,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
-    <title>Franz (Install)</title>
+    <title>Franz (Portable)</title>
     <authors>Stefan Malzner, Jonathan Burke</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>http://meetfranz.com</projectUrl>
