@@ -17,7 +17,7 @@ $packageArgs = @{
   silentArgs	=	"/Q /L `"$($env:TEMP)\chocolatey\$($packageName)\$($packageName).MsiInstall.log`" /norestart /passive /S"
   validExitCodes= @(0, 3010, 1641)
 
-  softwareName  = 'VisualStudio15*'
+  softwareName  = 'Microsoft Visual Studio Enterprise 15*'
   checksum      = ''
   checksumType  = 'md5'
   checksum64    = ''
@@ -25,20 +25,3 @@ $packageArgs = @{
 }
 
 Install-ChocolateyPackage @packageArgs
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
