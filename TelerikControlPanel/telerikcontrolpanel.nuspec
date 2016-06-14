@@ -47,7 +47,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
     <!--<mailingListUrl></mailingListUrl>-->
     <!--<bugTrackerUrl></bugTrackerUrl>-->
-    <tags>telerikcontrolpanel telerik portable</tags>
+    <tags>telerikcontrolpanel telerik portable admin</tags>
         <summary />
         <description>The Telerik Control Panel - your one-stop-shop for installing the Telerik tools for your account</description>
     <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
