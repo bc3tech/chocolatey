@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>realvnc</id>
     <title>RealVNC (Install)</title>
-    <version>5.3.0</version>
+    <version>5.3.1</version>
 	<packageSourceUrl>https://github.com/bc3tech/chocolatey/tree/master/RealVNC</packageSourceUrl>
     <authors>RealVNC Limited</authors>
     <owners>bc3tech</owners>
