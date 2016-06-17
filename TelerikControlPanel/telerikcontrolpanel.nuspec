@@ -25,7 +25,11 @@
     <tags>telerikcontrolpanel telerik portable admin</tags>
         <summary>The Telerik Control Panel - your one-stop-shop for installing the Telerik tools for your account</summary>
         <description>The Telerik Control Panel - your one-stop-shop for installing the Telerik tools for your account</description>
-    <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
+
+    <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
+    <dependencies>
+      <dependency id="7zip.commandline" version="9.20" />
+    </dependencies>
   </metadata>
   <files>
     <!-- this section controls what actually gets packaged into the Chocolatey package -->
