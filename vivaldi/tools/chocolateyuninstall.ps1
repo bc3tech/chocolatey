@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$packageName = 'vivaldi.portable'
-$softwareName = 'vivaldi.portable*'
+$packageName = 'vivaldi'
+$softwareName = 'vivaldi*'
 $installerType = 'MSI' 
 
 $silentArgs = '/qn /norestart'
