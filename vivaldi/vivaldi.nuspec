@@ -27,14 +27,14 @@
     <!-- If there is a license Url available, it is is required for the community feed -->
     <!-- <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>-->
-    <!--<projectSourceUrl>Software Source Location - is the software FOSS somewhere? Link to it with this</projectSourceUrl>-->
+    <projectSourceUrl>https://vivaldi.com/source/</projectSourceUrl>
     <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
     <!--<mailingListUrl></mailingListUrl>-->
     <bugTrackerUrl>https://vivaldi.com/bugreport/</bugTrackerUrl>
-    <tags>vivaldi admin chrome googlechrome chromium</tags>
+    <tags>vivaldi admin chromium browser</tags>
     <summary>A Browser for our Friends</summary>
-    <description>Non-Google Chrome-based browser</description>
-    <releaseNotes>What’s new in this release? Lots. Most interestingly, editable mouse gestures. Or just think of it as MYOMG, because now you can Make Your Own Mouse Gestures. </releaseNotes>
+    <description>Web browser based on [Chromium](https://chocolatey.org/packages/chromium) with added [features](https://vivaldi.com/features/) inspired by [Opera](https://chocolatey.org/packages/opera).</description>
+    <releaseNotes>https://vivaldi.net/content/vivaldi-updates</releaseNotes>
     <!-- =============================== -->      
 
     <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
