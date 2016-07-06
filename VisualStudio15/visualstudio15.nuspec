@@ -29,6 +29,9 @@
     <summary>The next version of Visual Studio is available for preview!</summary>
     <description>Visual Studio Enterprise “15” Preview 2 is an early build of the next major release of Visual Studio. Preview provides early adopters with an opportunity to try out the new and improved product features, and the ability to share feedback with the product team. </description>
     <releaseNotes>https://www.visualstudio.com/news/releasenotes/vs15-relnotes</releaseNotes>
+    <dependencies>
+      <dependency id="imdisk" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
