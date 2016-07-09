@@ -5,14 +5,14 @@
     <id>visualstudio15</id>
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-    <version>15.0.25302.0</version>
+    <version>15.0-preview3</version>
 	<packageSourceUrl>https://github.com/bc3tech/chocolatey/tree/master/VisualStudio15</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>bc3tech</owners>
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
-    <title>Visual Studio "15" Preview 2 (Install)</title>
+    <title>Visual Studio "15" Preview 3 (Install)</title>
     <authors>Microsoft</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://www.visualstudio.com/en-us/downloads/visual-studio-next-downloads-vs.aspx</projectUrl>
@@ -25,13 +25,13 @@
     <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
     <!--<mailingListUrl></mailingListUrl>-->
     <!--<bugTrackerUrl></bugTrackerUrl>-->
-    <tags>visualstudio15 admin visualstudio vs15</tags>
+    <tags>visualstudio15 admin visualstudio vs15 notsilent</tags>
     <summary>The next version of Visual Studio is available for preview!</summary>
-    <description>Visual Studio Enterprise “15” Preview 2 is an early build of the next major release of Visual Studio. Preview provides early adopters with an opportunity to try out the new and improved product features, and the ability to share feedback with the product team. </description>
+    <description>Visual Studio Enterprise “15” Preview 3 is an early build of the next major release of Visual Studio. Preview provides early adopters with an opportunity to try out new and improved product features, and the ability to share feedback with the product team.
+
+**PLEASE NOTE**: This preview has not been subject to final validation and is not meant to be run on production workstations or servers.
+ </description>
     <releaseNotes>https://www.visualstudio.com/news/releasenotes/vs15-relnotes</releaseNotes>
-    <dependencies>
-      <dependency id="imdisk" />
-    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
