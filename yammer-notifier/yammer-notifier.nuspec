@@ -38,7 +38,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <authors>Microsoft</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://products.office.com/en-us/yammer/yammer-desktop-notifier</projectUrl>
-    <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/yammer-notifier.png</iconUrl>-->
+    <iconUrl>https://c.s-microsoft.com/en-us/CMSImages/Image_AccessWeb_144x141.png?version=b4b15fd1-379c-2574-975e-a555752a378d</iconUrl>
     <!-- <copyright>Year Software Vendor</copyright> -->
     <!-- If there is a license Url available, it is is required for the community feed -->
     <licenseUrl>https://products.office.com/en-us/yammer/terms-of-use</licenseUrl>
