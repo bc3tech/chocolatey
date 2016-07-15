@@ -1,0 +1,1 @@
+﻿http://chocolatey.org/packages/bot-framework-emulator
