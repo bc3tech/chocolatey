@@ -3,7 +3,7 @@
 $packageName= 'vivaldi'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-$downloadedFile = Get-ChocolateyWebFile $packageName "$toolsDir\vivaldi-downloaded.zip" -Url 'https://downloads.vivaldi.com/snapshot/Vivaldi.1.3.551.21.exe' -Url64bit 'https://downloads.vivaldi.com/snapshot/Vivaldi.1.3.551.21.x64.exe'
+$downloadedFile = Get-ChocolateyWebFile $packageName "$toolsDir\vivaldi-downloaded.zip" -Url 'https://downloads.vivaldi.com/snapshot/Vivaldi.1.3.551.28.exe' -Url64bit 'https://downloads.vivaldi.com/snapshot/Vivaldi.1.3.551.28.x64.exe'
 
 Write-Host 'Unpacking vivaldi installer like an archive...'
 & 7z x -aoa -bb0 -bso0 -o"$($toolsDir)\$($packageName)" $downloadedFile
