@@ -4,7 +4,7 @@ $ErrorActionPreference = 'Stop';
 
 $packageName= 'VisualStudio15'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'http://download.microsoft.com/download/e/e/6/ee6e936e-6323-4b51-a6f3-7b276b7e168a/vs_enterprise.exe'
+$url        = 'https://download.microsoft.com/download/2/0/0/200fe227-bc0d-4dc5-b78d-15e70cc85e81/vs_bootstrapper.exe'
 $url64      = $url
 
 $packageArgs = @{
@@ -18,8 +18,8 @@ $packageArgs = @{
   validExitCodes= @(0, 3010, 1641)
 
   softwareName  = 'Microsoft Visual Studio Enterprise 15*'
-  checksum      = ''
-  checksumType  = 'md5'
+  checksum      = '82AC865C7987B0F9CF3F5E6BF5B17C659A951439'
+  checksumType  = 'sha1'
   checksum64    = ''
   checksumType64= 'md5'
 }
