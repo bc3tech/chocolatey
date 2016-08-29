@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
+    <id>realvnc.install</id>
+    <title>RealVNC (Install)</title>
+    <version>5.3.2</version>
+	<packageSourceUrl>https://github.com/bc3tech/chocolatey/tree/master/RealVNC</packageSourceUrl>
+    <authors>RealVNC Limited</authors>
+    <owners>bc3tech</owners>
+    <summary>VNC enables you to remotely access and control your computers from another computer or mobile device</summary>
+    <description>VNC enables you to remotely access and control your computers from another computer or mobile device, wherever you are in the world. It is used by individuals and by organizations across every industry sector for a range of different use cases, including providing IT desktop support to colleagues and friends, and accessing systems and services on the move.
+    </description>
+    <projectUrl>http://www.realvnc.com/products/vnc/</projectUrl>
+    <!--<projectSourceUrl></projectSourceUrl>
+    <docsUrl></docsUrl>
+    <mailingListUrl></mailingListUrl>
+    <bugTrackerUrl></bugTrackerUrl>-->
+    <tags>realvnc vnc admin</tags>
+    <copyright>© 2002-2016 RealVNC Limited. All rights reserved.</copyright>
+    <licenseUrl>http://www.realvnc.com/products/vnc/documentation/5.3/licensing-faq/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://www.realvnc.com/assets/img/logo.png</iconUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
