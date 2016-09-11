@@ -10,7 +10,7 @@
     <!-- version should MATCH as closely as possible with the underlying software -->
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-    <version>11.0.135</version>
+    <version>12.0.93</version>
 	<packageSourceUrl>https://github.com/bc3tech/chocolatey/tree/master/PhraseExpress/PhraseExpress</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>bc3tech</owners>
@@ -40,12 +40,12 @@
 - Quick access to the Windows clipboard history.
 - Correct spelling mistakes in any application.
 - Free for personal use</description>
-    <releaseNotes>The #mail macro functions works around the Outlook DLL to prevent showing the error message "The operating system is not configured to run this application".</releaseNotes>
+    <releaseNotes>http://www.phraseexpress.com/docs12/09/changelog.php</releaseNotes>
     <!-- =============================== -->      
 
     <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
     <dependencies>
-      <dependency id="phraseexpress.install" version="[11.0.135]" />
+      <dependency id="phraseexpress.install" version="[12.0.93]" />
     </dependencies>
   </metadata>
 </package>
