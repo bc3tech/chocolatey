@@ -4,8 +4,8 @@ $ErrorActionPreference = 'Stop';
 
 $packageName= 'TrayStatus.Install'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://binaryfortressdownloads.com/Download/BFSFiles/114/TrayStatusSetup-2.0.2.exe'
-$url64      = ''
+$url        = 'https://binaryfortressdownloads.com/Download/BFSFiles/114/TrayStatusSetup-3.0.exe'
+$url64      = $url
 
 $packageArgs = @{
   packageName   = $packageName
@@ -18,27 +18,10 @@ $packageArgs = @{
   silentArgs   = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
 
   softwareName  = 'TrayStatus.Install*'
-  checksum      = ''
+  checksum      = 'DD928E09C0DF6AC1058722BA3E1C32B2'
   checksumType  = 'md5'
-  checksum64    = ''
+  checksum64    = 'DD928E09C0DF6AC1058722BA3E1C32B2'
   checksumType64= 'md5'
 }
 
 Install-ChocolateyPackage @packageArgs
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
