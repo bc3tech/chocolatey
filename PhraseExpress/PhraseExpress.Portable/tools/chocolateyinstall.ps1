@@ -16,10 +16,10 @@ $packageArgs = @{
 
 
   softwareName  = 'PhraseExpress.Portable*'
-  checksum      = '013D7FE4E726A168371AA18C2E28376370A9F91B'
-  checksumType  = 'SHA1'
-  checksum64    = '013D7FE4E726A168371AA18C2E28376370A9F91B'
-  checksumType64= 'SHA1'
+  checksum      = 'C489BE02877A4DDA64C60439133DBA61'
+  checksumType  = 'md5'
+  checksum64    = 'C489BE02877A4DDA64C60439133DBA61'
+  checksumType64= 'md5'
 }
 
 Install-ChocolateyZipPackage @packageArgs

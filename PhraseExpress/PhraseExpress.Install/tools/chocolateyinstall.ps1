@@ -18,10 +18,10 @@ $packageArgs = @{
   validExitCodes= @(0, 3010, 1641)
 
   softwareName  = 'PhraseExpress.Install*'
-  checksum      = 'FDF38C5BCEC4E751DB427FF26F9255DDE16FFC24'
-  checksumType  = 'SHA1'
-  checksum64    = 'FDF38C5BCEC4E751DB427FF26F9255DDE16FFC24'
-  checksumType64= 'SHA1'
+  checksum      = 'DC5D23E5A3513AC2D6F42548DFF02954'
+  checksumType  = 'md5'
+  checksum64    = 'DC5D23E5A3513AC2D6F42548DFF02954'
+  checksumType64= 'md5'
 }
 
 Install-ChocolateyPackage @packageArgs
