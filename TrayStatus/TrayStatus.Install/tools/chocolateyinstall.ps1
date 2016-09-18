@@ -4,7 +4,7 @@ $ErrorActionPreference = 'Stop';
 
 $packageName= 'TrayStatus.Install'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://binaryfortressdownloads.com/Download/BFSFiles/114/TrayStatusSetup-3.0.exe'
+$url        = 'https://binaryfortressdownloads.com/Download/BFSFiles/114/TrayStatusSetup-3.1.exe'
 $url64      = $url
 
 $packageArgs = @{
@@ -18,9 +18,9 @@ $packageArgs = @{
   silentArgs   = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
 
   softwareName  = 'TrayStatus.Install*'
-  checksum      = 'DD928E09C0DF6AC1058722BA3E1C32B2'
+  checksum      = '7B9AB5CD96B0E990A5A345EA1709FEAF'
   checksumType  = 'md5'
-  checksum64    = 'DD928E09C0DF6AC1058722BA3E1C32B2'
+  checksum64    = '7B9AB5CD96B0E990A5A345EA1709FEAF'
   checksumType64= 'md5'
 }
 
