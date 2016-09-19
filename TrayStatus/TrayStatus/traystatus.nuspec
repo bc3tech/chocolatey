@@ -19,7 +19,7 @@
     <bugTrackerUrl></bugTrackerUrl>-->
     <tags>traystatus admin</tags>
     <copyright></copyright>
-    <licenseUrl>https://www.binaryfortress.com/TrayStatus/</licenseUrl>
+    <licenseUrl>https://www.traystatus.com/License/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://www.binaryfortress.com/ImagesCommon/Icons/64x64/TrayStatus.png</iconUrl>
     <dependencies>
