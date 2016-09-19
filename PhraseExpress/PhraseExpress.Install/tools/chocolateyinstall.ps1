@@ -18,9 +18,9 @@ $packageArgs = @{
   validExitCodes= @(0, 3010, 1641)
 
   softwareName  = 'PhraseExpress.Install*'
-  checksum      = 'DC5D23E5A3513AC2D6F42548DFF02954'
+  checksum      = '879DE2AB3A59B420BCB001DC455B577F'
   checksumType  = 'md5'
-  checksum64    = 'DC5D23E5A3513AC2D6F42548DFF02954'
+  checksum64    = '879DE2AB3A59B420BCB001DC455B577F'
   checksumType64= 'md5'
 }
 
