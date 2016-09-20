@@ -18,7 +18,7 @@
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
-    <title>PhraseExpress (Install)</title>
+    <title>PhraseExpress</title>
     <authors>Bartels Media GmbH</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>http://www.phraseexpress.com/index.html</projectUrl>
