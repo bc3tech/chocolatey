@@ -10,7 +10,7 @@
     <!-- version should MATCH as closely as possible with the underlying software -->
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-    <version>1.4.589.11</version>
+    <version>1.5.658.44</version>
     <packageSourceUrl>https://github.com/bc3tech/chocolatey/tree/master/vivaldi</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>bc3tech</owners>
@@ -31,7 +31,7 @@
     <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
     <!--<mailingListUrl></mailingListUrl>-->
     <bugTrackerUrl>https://vivaldi.com/bugreport/</bugTrackerUrl>
-    <tags>vivaldi admin chromium browser</tags>
+    <tags>vivaldi chromium browser googlechrome chrome</tags>
     <summary>A Browser for our Friends</summary>
     <description>Web browser based on [Chromium](https://chocolatey.org/packages/chromium) with added [features](https://vivaldi.com/features/) inspired by [Opera](https://chocolatey.org/packages/opera).</description>
     <releaseNotes>https://vivaldi.net/content/vivaldi-updates</releaseNotes>
