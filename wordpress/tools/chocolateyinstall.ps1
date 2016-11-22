@@ -9,7 +9,6 @@ $packageArgs = @{
   packageName   = $packageName
   softwareName  = 'wordpress*'
   file          = $fileLocation
-  fileFullPath  = $fileLocation
   fileType      = 'exe'
   silentArgs    = "/S"
   validExitCodes= @(0)
