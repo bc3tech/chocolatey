@@ -10,7 +10,7 @@
     <!-- version should MATCH as closely as possible with the underlying software -->
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-    <version>12.0.105</version>
+    <version>12.0.128</version>
 	<packageSourceUrl>https://github.com/bc3tech/chocolatey/tree/master/PhraseExpress/PhraseExpress</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>bc3tech</owners>
@@ -23,7 +23,7 @@
     <!-- projectUrl is required for the community feed -->
     <projectUrl>http://www.phraseexpress.com/index.html</projectUrl>
     <iconUrl>http://www.phraseexpress.com//autotext/autotext.png</iconUrl>
-    <copyright>2002-2016</copyright>
+    <copyright>2002-2017</copyright>
     <!-- If there is a license Url available, it is is required for the community feed -->
     <licenseUrl>http://www.phraseexpress.com/other/PhraseExpress_license_agreement.pdf</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -45,7 +45,7 @@
 
     <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
     <dependencies>
-      <dependency id="phraseexpress.install" version="[12.0.105]" />
+      <dependency id="phraseexpress.install" version="[12.0.128]" />
     </dependencies>
   </metadata>
 </package>

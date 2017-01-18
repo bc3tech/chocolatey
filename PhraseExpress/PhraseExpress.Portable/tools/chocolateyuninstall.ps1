@@ -1,8 +1,3 @@
-﻿
+﻿$ErrorActionPreference = 'Stop';
 
-$ErrorActionPreference = 'Stop';
-
-$packageName = 'PhraseExpress.Portable'
-
-Uninstall-ChocolateyZipPackage $packageName
-
+Uninstall-ChocolateyZipPackage 'PhraseExpress.Portable'
