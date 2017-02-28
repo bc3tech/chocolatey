@@ -25,5 +25,5 @@ $packageArgs = @{
 
 Install-ChocolateyPackage @packageArgs
 
-Write-Output "Pinning Microsoft Teams version since it auto-updates upon launch"
-choco pin add -n=microsoftteams
+Write-Output "Since Microsoft Teams auto-updates on launch, you should pin its version by typing"
+Write-Output "choco pin add -n=microsoftteams"
