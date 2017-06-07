@@ -16,7 +16,7 @@ $packageArgs = @{
 
 
   softwareName  = 'PhraseExpress.Portable*'
-  checksum      = 'F5B981A62242714F2569091F870C7CB1CAA9073432A5A0A3436E33FE0E84AB9F'
+  checksum      = 'BA22EFB229E696799806736F78D6AEF2482F11CAEC7E09CD2F70BE3D4233722E'
   checksumType  = 'sha256'
 }
 
