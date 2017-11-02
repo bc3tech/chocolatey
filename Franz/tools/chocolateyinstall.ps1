@@ -2,12 +2,20 @@
 
 $packageName= 'franz'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://github.com/meetfranz/franz-app/releases/download/4.0.4/Franz-win32-ia32-4.0.4.zip'
-$url64      = 'https://github.com/meetfranz/franz-app/releases/download/4.0.4/Franz-win32-x64-4.0.4.zip'
-$fileType = 'EXE'
-$silentArgs = ''
+$url        = 'https://github.com/meetfranz/franz/releases/download/v5.0.0-beta.11/franz-setup-5.0.0-beta.11.exe'
 
-$zipInstallDir = Install-ChocolateyZipPackage $packageName $url -Checksum "16A4CB546F6841580295907285FBBEA047198617" -ChecksumType "SHA1" $toolsDir $url64 -Checksum64 "F6B59469CBA577C0DA8B477C5D3CB3E41627114F" -ChecksumType64 "SHA1"
+$packageArgs = @{
+  packageName   = $packageName
+  unzipLocation = $toolsDir
+  fileType      = 'EXE'
+  url           = $url
 
-$fileInstallLocation = Join-Path $zipInstallDir 'FranzSetup.exe'
-Install-ChocolateyInstallPackage $packageName $fileType $silentArgs "$fileInstallLocation"
+  silentArgs    = ''
+  validExitCodes= @(0, 3010, 1641)
+
+  softwareName  = 'franz*'
+  checksum      = 'CDBD31C0B4151BA34EAE6C0D3651355E1C2F0C055E200F9B6886497B97EBC25D'
+  checksumType  = 'SHA256'
+}
+
+Install-ChocolateyPackage @packageArgs

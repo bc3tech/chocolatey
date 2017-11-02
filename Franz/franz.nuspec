@@ -26,7 +26,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- version should MATCH as closely as possible with the underlying software -->
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-    <version>4.0.4-beta</version>
+    <version>5.0.0-beta11</version>
     <packageSourceUrl>http://github.com/bc3tech/choco-franz</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>bc3tech</owners>
@@ -50,7 +50,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <tags>franz Slack HipChat Facebook Telegram WhatsApp WeChat Google Skype GroupMe ChatWork Gitter Discord Steam Grape</tags>
     <summary>Franz is a free messaging app / former Emperor of Austria and combines chat &amp; messaging services into one application.</summary>
     <description>He currently supports Slack, WhatsApp, WeChat, HipChat, Facebook Messenger, Telegram, Google Hangouts, GroupMe, Skype and many more.</description>
-    <releaseNotes>http://meetfranz.com/changelog.html</releaseNotes>
+    <releaseNotes>https://www.github.com/meetfranz/franz/blob/master/CHANGELOG.md</releaseNotes>
     <!-- =============================== -->      
 
     <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
