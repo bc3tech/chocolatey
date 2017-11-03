@@ -4,7 +4,7 @@ $ErrorActionPreference = 'Stop';
 
 $packageName= 'PhraseExpress.Install'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'http://www.phraseexpress.com/PhraseExpressSetup.msi'
+$url        = 'http://www.phraseexpress.com/PhraseExpressSetup.msi' 
 $url64      = $url
 
 $packageArgs = @{
