@@ -2,7 +2,7 @@
 
 $packageName= 'franz'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://github.com/meetfranz/franz/releases/download/v5.0.0-beta.12/franz-setup-5.0.0-beta.12.exe'
+$url        = 'https://github.com/meetfranz/franz/releases/download/v5.0.0-beta.13/franz-setup-5.0.0-beta.13.exe'
 
 $packageArgs = @{
   packageName   = $packageName
@@ -14,7 +14,7 @@ $packageArgs = @{
   validExitCodes= @(0, 3010, 1641)
 
   softwareName  = 'franz*'
-  checksum      = 'F87F9F9679DB9C979EA8752F3DE933535A768E10966503F62926033ACDAFF05B'
+  checksum      = 'D44564356B2CD8605232104750A8E62AD3C27E9F9A1BAA8CEBFC2239184B2060'
   checksumType  = 'SHA256'
 }
 
