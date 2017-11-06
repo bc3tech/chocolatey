@@ -2,7 +2,7 @@
 
 $packageName= 'franz'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://github.com/meetfranz/franz/releases/download/v5.0.0-beta.11/franz-setup-5.0.0-beta.11.exe'
+$url        = 'https://github.com/meetfranz/franz/releases/download/v5.0.0-beta.12/franz-setup-5.0.0-beta.12.exe'
 
 $packageArgs = @{
   packageName   = $packageName
@@ -10,12 +10,14 @@ $packageArgs = @{
   fileType      = 'EXE'
   url           = $url
 
-  silentArgs    = ''
+  silentArgs    = '/S'
   validExitCodes= @(0, 3010, 1641)
 
   softwareName  = 'franz*'
-  checksum      = 'CDBD31C0B4151BA34EAE6C0D3651355E1C2F0C055E200F9B6886497B97EBC25D'
+  checksum      = 'F87F9F9679DB9C979EA8752F3DE933535A768E10966503F62926033ACDAFF05B'
   checksumType  = 'SHA256'
 }
+
+New-Item "$($toolsDir)\$($packageName)\tools\FranzSetup.exe.ignore" -type file -force | Out-Null
 
 Install-ChocolateyPackage @packageArgs
