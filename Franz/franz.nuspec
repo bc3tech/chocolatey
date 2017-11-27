@@ -26,7 +26,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- version should MATCH as closely as possible with the underlying software -->
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-    <version>5.0.0-beta13</version>
+    <version>5.0.0-beta14</version>
     <packageSourceUrl>http://github.com/bc3tech/choco-franz</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>bc3tech</owners>
@@ -39,7 +39,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- projectUrl is required for the community feed -->
     <projectUrl>http://meetfranz.com</projectUrl>
     <iconUrl>https://storage.googleapis.com/franz-1245.appspot.com/build-assets/win-app-ico.ico</iconUrl>
-    <copyright>Copyright (c) 2016 Meet Franz (Stefan Malzner &amp; Jonathan Burke)</copyright>
+    <copyright>Copyright (c) 2017 Meet Franz (Stefan Malzner &amp; Jonathan Burke)</copyright>
     <!-- If there is a license Url available, it is is required for the community feed -->
     <licenseUrl>http://www.meetfranz.com/terms.html</licenseUrl>
     <!--<requireLicenseAcceptance>true</requireLicenseAcceptance>-->
