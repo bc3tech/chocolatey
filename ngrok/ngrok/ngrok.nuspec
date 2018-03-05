@@ -25,17 +25,20 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <id>ngrok</id>
     <version>2.0</version>
     <title>Ngrok (portable)</title>
-    <authors>Alan Shreve, bc3tech</authors>
+    <authors>Alan Shreve</authors>
     <owners>bc3tech</owners>
     <licenseUrl>https://github.com/inconshreveable/ngrok/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://ngrok.com/</projectUrl>
-    <projectSourceUrl>https://github.com/bc3tech/chocolatey/tree/master/ngrok</projectSourceUrl>
+    <projectSourceUrl>https://github.com/inconshreveable/ngrok</projectSourceUrl>
+    <docsUrl>https://ngrok.com/docs</docsUrl>
+    <bugTrackerUrl>https://github.com/inconshreveable/ngrok/issues</bugTrackerUrl>
+    <packageSourceUrl>https://github.com/bc3tech/chocolatey/tree/master/ngrok</packageSourceUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Ngrok is a reverse proxy that creates a secure tunnel between from a public endpoint to a locally running web service. ngrok captures and analyzes all traffic over the tunnel for later inspection and replay.</description>
     <summary>Introspected tunnels to localhost</summary>
     <releaseNotes />
     <copyright>inconshreveable</copyright>
-    <tags>ngrok work</tags>
+    <tags>ngrok</tags>
     <dependencies>
       <dependency id="ngrok.portable" version="[2.0.1]" />
     </dependencies>
