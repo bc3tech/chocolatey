@@ -1,0 +1,3 @@
+[submodule "ngrok/ngrok-chocolatey-package"]
+	path = ngrok/ngrok-chocolatey-package
+	url = https://github.com/bc3tech/ngrok-chocolatey-package.git
