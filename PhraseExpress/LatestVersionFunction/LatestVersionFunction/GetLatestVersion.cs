@@ -15,10 +15,11 @@ namespace LatestVersionFunction
         private static readonly HttpClient _client = new HttpClient();
 
         [FunctionName("GetLatestVersion")]
-        public static IActionResult Run([HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)]HttpRequest req, TraceWriter log)
+        public static IActionResult Run([HttpTrigger(AuthorizationLevel.Function, "get", Route = null)]HttpRequest req, TraceWriter log)
         {
             //using (var changelogStream = await _client.GetStreamAsync(Environment.GetEnvironmentVariable(@"ChangeLogUrl")))
             {
+                // eg: https://www.phraseexpress.com/update13.php
                 var doc = XDocument.Load(Environment.GetEnvironmentVariable(@"VersionCheckUrl"));
 
                 /* sample doc
