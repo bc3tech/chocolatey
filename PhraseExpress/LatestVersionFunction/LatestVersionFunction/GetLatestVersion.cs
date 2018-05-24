@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using System.Net.Http;
+using System.Security.Cryptography;
 using System.Xml.Linq;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -15,7 +16,7 @@ namespace LatestVersionFunction
         private static readonly HttpClient _client = new HttpClient();
 
         [FunctionName("GetLatestVersion")]
-        public static IActionResult Run([HttpTrigger(AuthorizationLevel.Function, "get", Route = null)]HttpRequest req, TraceWriter log)
+        public static async System.Threading.Tasks.Task<IActionResult> RunAsync([HttpTrigger(AuthorizationLevel.Function, "get", Route = null)]HttpRequest req, TraceWriter log)
         {
             //using (var changelogStream = await _client.GetStreamAsync(Environment.GetEnvironmentVariable(@"ChangeLogUrl")))
             {
@@ -39,15 +40,43 @@ namespace LatestVersionFunction
         </versions>
         <installationtype>
         * */
-                var versions = doc
+                var clientElement = doc
                     .Element(@"xml")
-                    .Element(@"client")
+                    .Element(@"client");
+                var versions = clientElement
                     .Element(@"versions")
                     .Elements()
                     .Select(i => new Version(i.Value))
                     .OrderByDescending(i => i);
 
-                return new OkObjectResult(versions.First().ToString());
+                var downloadBaseUrl = Environment.GetEnvironmentVariable(@"DownloadBaseUrl");
+
+                string zipHashString,
+                    zipDownloadUrl = $@"{downloadBaseUrl}PhraseExpress_USB.zip",
+                    msiHashString,
+                    msiDownloadUrl = $@"{downloadBaseUrl}PhraseExpressSetup.msi";
+
+                using (var sha = SHA256.Create())
+                {
+                    using (var versionDownload = await _client.GetStreamAsync(zipDownloadUrl))
+                    {
+                        var hashBytes = sha.ComputeHash(versionDownload);
+                        zipHashString = string.Join(string.Empty, hashBytes.Select(b => b.ToString("X2")));
+                        log.Info($@"ZIP computed hash: {zipHashString}");
+                    }
+                    GC.Collect();
+
+                    using (var versionDownload = await _client.GetStreamAsync(msiDownloadUrl))
+                    {
+                        var hashBytes = sha.ComputeHash(versionDownload);
+                        msiHashString = string.Join(string.Empty, hashBytes.Select(b => b.ToString("X2")));
+                        log.Info($@"MSI computed hash: {msiHashString}");
+                    }
+                    GC.Collect();
+                }
+                GC.Collect();
+
+                return new OkObjectResult(new { version = versions.First().ToString(), zip = new { download = zipDownloadUrl, hash = zipHashString }, msi = new { download = msiDownloadUrl, hash = msiHashString } });
             }
         }
     }
