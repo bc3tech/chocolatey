@@ -2,6 +2,8 @@
 using System;
 using System.Linq;
 using System.Net.Http;
+using System.Security.Cryptography;
+using System.Text;
 using System.Xml.Linq;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -47,15 +49,38 @@ namespace VivaldiVersionChecker
     </channel>
 </rss>
             */
-            var version = xdocResult
+
+            var enclosureElement = xdocResult
                 .Element(@"rss")
                 .Element(@"channel")
                 .Element(@"item")
-                .Element(@"enclosure")
-                .Attributes()
-                    .Single(a => a.Name.LocalName.Equals(@"version", StringComparison.OrdinalIgnoreCase));
+                .Element(@"enclosure");
+            var version = enclosureElement.Attributes()
+                .Single(a => a.Name.LocalName.Equals(@"version", StringComparison.OrdinalIgnoreCase));
+            var x64url = enclosureElement.Attribute(@"url").Value;
+            var x86url = x64url.Replace(@".x64", string.Empty).Replace(@"X64", string.Empty);
 
-            return new OkObjectResult(version.Value);
+            // We make use of using(), streams, and GC.Collect() here to make sure our Function keeps its memory footprint low so as not to incur unnecessary usage charges on the consumption plan
+            string x64hashString, x86hashString;
+            using (var sha = SHA256.Create())
+            {
+                using (var versionByteStream = await _client.GetStreamAsync(x64url))
+                {
+                    x64hashString = string.Join(string.Empty, sha.ComputeHash(versionByteStream).Select(b => b.ToString("X2")));
+                    log.Info($@"64-bit hash: {x64hashString}");
+                }
+                GC.Collect();
+
+                using (var versionByteStream = await _client.GetStreamAsync(x86url))
+                {
+                    x86hashString = string.Join(string.Empty, sha.ComputeHash(versionByteStream).Select(b => b.ToString("X2")));
+                    log.Info($@"32-bit hash: {x86hashString}");
+                }
+                GC.Collect();
+            }
+            GC.Collect();
+
+            return new OkObjectResult(new { version = version.Value, x86 = new { download = x86url, hash = x86hashString }, x64 = new { download = x64url, hash = x64hashString } });
         }
     }
 }
