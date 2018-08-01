@@ -1,0 +1,8 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "SnapshotVersionCheckUrl": "https://update.vivaldi.com/update/1.0/win/appcast.x64.xml",
+    "ReleaseVersionCheckUrl": "https://update.vivaldi.com/update/1.0/public/appcast.x64.xml"
+  }
+}
