@@ -6,13 +6,13 @@ $packageArgs = @{
     packageName    = $packageName
     fileType       = 'exe'
        
-    url            = 'https://downloads.vivaldi.com/stable/Vivaldi.1.15.1147.55.exe'
+    url            = 'https://downloads.vivaldi.com/stable/Vivaldi.1.15.1147.64.exe'
     silentArgs     = '--vivaldi-silent --do-not-launch-chrome --vivaldi-update'
     
-    checksum       = 'CB8A8FA0ED7B15BC0A4C6D294FFE0B02B3D143C10A0AF5D003659C11B06EE390'
+    checksum       = '937B924D73D615DA39C3A38602180312C5D43FF03E912CC8F531C28BD580469A'
     checksumType   = 'sha256' #default is md5, can also be sha1
-    url64bit       = 'https://downloads.vivaldi.com/stable/Vivaldi.1.15.1147.55.x64.exe'
-    checksum64     = 'FCAE5CF1D0F2D85DDFE809D7463D1F9285B4367408422968FA5E7C473165EBD9'
+    url64bit       = 'https://downloads.vivaldi.com/stable/Vivaldi.1.15.1147.64.x64.exe'
+    checksum64     = '125AF5AA2E75A0D4F034BC6B4927E77A9C3505C0D308C578B3F0D04972865B13'
     checksumType64 = 'sha256' #default is md5, can also be sha1
 }
 
