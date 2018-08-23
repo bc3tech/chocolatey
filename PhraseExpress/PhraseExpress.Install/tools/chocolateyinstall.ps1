@@ -18,7 +18,7 @@ $packageArgs = @{
   validExitCodes= @(0, 3010, 1641)
 
   softwareName  = 'PhraseExpress*'
-  checksum      = 'EA9B0062697F13BE83942D9C019E285DA3266BA2AF21095519A522E9EEDD198D'
+  checksum      = '0429C156912116CF6BF31620387222B74D437F34FB3BC4E7EA4CC425A4A7ADE1'
   checksumType  = 'sha256'
 }
 
