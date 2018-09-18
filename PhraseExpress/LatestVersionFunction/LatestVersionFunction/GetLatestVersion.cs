@@ -21,7 +21,7 @@ namespace LatestVersionFunction
             //using (var changelogStream = await _client.GetStreamAsync(Environment.GetEnvironmentVariable(@"ChangeLogUrl")))
             {
                 // eg: https://www.phraseexpress.com/update13.php
-                var doc = XDocument.Load(Environment.GetEnvironmentVariable(@"VersionCheckUrl"));
+                XDocument doc = XDocument.Load(Environment.GetEnvironmentVariable(@"VersionCheckUrl"));
 
                 /* sample doc
 <xml>
@@ -45,9 +45,7 @@ namespace LatestVersionFunction
                     .Element(@"client");
                 var versions = clientElement
                     .Element(@"versions")
-                    .Elements()
-                    .Select(i => new Version(i.Value))
-                    .OrderByDescending(i => i);
+                    .Elements();
 
                 var downloadBaseUrl = Environment.GetEnvironmentVariable(@"DownloadBaseUrl");
 
@@ -56,7 +54,21 @@ namespace LatestVersionFunction
                     msiHashString,
                     msiDownloadUrl = $@"{downloadBaseUrl}PhraseExpressSetup.msi";
 
-                using (var sha = SHA256.Create())
+                string targetVersion;
+                if (req.GetQueryParameterDictionary().TryGetValue(@"beta", out var betaValue)
+                    && bool.TryParse(betaValue, out var isBeta)
+                    && isBeta)
+                {
+                    targetVersion = versions.Single(i => i.Name.LocalName.Equals(@"betaversion", StringComparison.OrdinalIgnoreCase)).Value;
+                    zipDownloadUrl = $@"{downloadBaseUrl}PhraseExpressBeta_USB.zip";
+                    msiDownloadUrl = $@"{downloadBaseUrl}PhraseExpressBetaSetup.exe";
+                }
+                else
+                {   // assuming the default download URL is always a minor version
+                    targetVersion = versions.Single(i => i.Name.LocalName.Equals(@"minorupdate", StringComparison.OrdinalIgnoreCase)).Value;
+                }
+
+                using (SHA256 sha = SHA256.Create())
                 {
                     using (var versionDownload = await _client.GetStreamAsync(zipDownloadUrl))
                     {
@@ -76,7 +88,7 @@ namespace LatestVersionFunction
                 }
                 GC.Collect();
 
-                return new OkObjectResult(new { version = versions.First().ToString(), zip = new { download = zipDownloadUrl, hash = zipHashString }, msi = new { download = msiDownloadUrl, hash = msiHashString } });
+                return new OkObjectResult(new { version = targetVersion, zip = new { download = zipDownloadUrl, hash = zipHashString }, msi = new { download = msiDownloadUrl, hash = msiHashString } });
             }
         }
     }
