@@ -4,7 +4,7 @@ $ErrorActionPreference = 'Stop';
 
 $packageName= 'PhraseExpress.Install'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://www.phraseexpress.com/PhraseExpressSetup.msi' 
+$url        = '$msiurl$' 
 $url64      = $url
 
 $packageArgs = @{
@@ -18,7 +18,7 @@ $packageArgs = @{
   validExitCodes= @(0, 3010, 1641)
 
   softwareName  = 'PhraseExpress*'
-  checksum      = '0429C156912116CF6BF31620387222B74D437F34FB3BC4E7EA4CC425A4A7ADE1'
+  checksum      = '$msisha$'
   checksumType  = 'sha256'
 }
 

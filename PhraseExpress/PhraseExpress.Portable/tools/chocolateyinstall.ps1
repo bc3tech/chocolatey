@@ -4,7 +4,7 @@ $ErrorActionPreference = 'Stop';
 
 $packageName= 'PhraseExpress.Portable'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://www.phraseexpress.com/PhraseExpress_USB.zip' 
+$url        = '$zipurl$' 
 $url64      = $url
 
 $packageArgs = @{
@@ -16,7 +16,7 @@ $packageArgs = @{
 
 
   softwareName  = 'PhraseExpress.Portable*'
-  checksum      = '5E54D666D84F598015E607BE794262B72096C83632B4AB680962622D834A5AF3'
+  checksum      = '$zipsha$'
   checksumType  = 'sha256'
 }
 
