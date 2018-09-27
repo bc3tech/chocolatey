@@ -32,8 +32,6 @@ $content = $content -replace [regex]::Escape('$64url$'), $url64
 $content = $content -replace [regex]::Escape('$32sha$'), $sha32
 $content = $content -replace [regex]::Escape('$64sha$'), $sha64
 
-Write-Host $content
-
 Set-Content $installFile.PSPath -Value $content
 
 choco pack --version $version --out $outputdirectory
