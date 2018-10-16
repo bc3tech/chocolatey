@@ -38,7 +38,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <authors>Stefan Malzner, Jonathan Burke</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>http://meetfranz.com</projectUrl>
-    <iconUrl>https://storage.googleapis.com/franz-1245.appspot.com/build-assets/win-app-ico.ico</iconUrl>
+    <iconUrl>https://bc3techchocosupport.blob.core.windows.net/iconimages/franz.png</iconUrl>
     <copyright>Copyright (c) 2017 Meet Franz (Stefan Malzner &amp; Jonathan Burke)</copyright>
     <!-- If there is a license Url available, it is is required for the community feed -->
     <licenseUrl>http://www.meetfranz.com/terms.html</licenseUrl>
