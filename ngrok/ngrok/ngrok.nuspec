@@ -30,6 +30,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <licenseUrl>https://github.com/inconshreveable/ngrok/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://ngrok.com/</projectUrl>
     <projectSourceUrl>https://github.com/inconshreveable/ngrok</projectSourceUrl>
+    <iconUrl>https://bc3techchocosupport.blob.core.windows.net/iconimages/ngrok.png</iconUrl>
     <docsUrl>https://ngrok.com/docs</docsUrl>
     <bugTrackerUrl>https://github.com/inconshreveable/ngrok/issues</bugTrackerUrl>
     <packageSourceUrl>https://github.com/bc3tech/chocolatey/tree/master/ngrok</packageSourceUrl>
