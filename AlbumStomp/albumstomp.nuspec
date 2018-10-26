@@ -15,6 +15,8 @@
     <tags>albumstomp</tags>
     <summary>Create beautiful albums faster and easier than ever before.</summary>
     <description>Create beautiful albums faster and easier than ever before.</description>
+
+    <packageSourceUrl>https://github.com/bc3tech/chocolatey/tree/master/AlbumStomp</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
