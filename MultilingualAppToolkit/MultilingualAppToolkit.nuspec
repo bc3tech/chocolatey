@@ -10,11 +10,16 @@
         <projectUrl>https://marketplace.visualstudio.com/items?itemName=MultilingualAppToolkit.MultilingualAppToolkit-18308</projectUrl>
         <iconUrl>https://multilingualapptoolkit.gallerycdn.vsassets.io/extensions/multilingualapptoolkit/multilingualapptoolkit-18308/4.0.6900.0/1519347086549/Microsoft.VisualStudio.Services.Icons.Default</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>The Multilingual App Toolkit v4.0 extension (beta) for Visual Studio 2012, 2013, and 2015</description>
-        <summary />
-        <releaseNotes />
-        <copyright />
-        <language />
+        <description>The Multilingual App Toolkit includes an extension for Visual Studio that helps create simpler translation workflows by focusing on the following areas:
+        
+- Integration with Visual Studio IDE. Add and manage translation files within a project solution using standard Visual Studio menus and dialogs.
+- Pseudo language integration. Test localized apps 'in-house' by identifying localization issues during development. These issues can include hard-coded, concatenated, or truncated strings, and visual issues that arise when working with different languages. Pseudo translations are stored in the localization industry standard XLIFF file format, and you can edit them just like any other language translation. This gives you granular control over pseudo translation testing.
+- Microsoft Language Portal integration. Get terminology and UI translations from actual Microsoft products through the Microsoft Terminology Service API (requires an active Internet connection).
+- Machine Translator integration. Get suggestions via integrated Microsoft Translator services (requires an active Internet connection). Integration with Microsoft Translator services gives you instant visualization and testing across multiple languages without the assistance of a human translator.
+- Translation file export and import roundtrip. Send and receive resources with individuals or a translator service via XLIFF files.
+- Dedicated localization editor. Use to easily edit translated strings. Get translations and suggestions quickly via the integrated Microsoft Language Portal and the Microsoft Translator services (requires an active Internet connection). You can also quickly edit data stored in XLIFF files by adjusting pseudo and actual translations.
+</description>
+        <summary>Install alongside Visual Studio to streamline your localization workflow during app development. </summary>
         <tags>multilingualapptoolkit mat microsoft visualstudio</tags>
     </metadata>
     <files>
