@@ -26,8 +26,6 @@ Param(
 
 $chocoInstallFiles = Get-ChildItem . chocolateyinstall.ps1 -Recurse
 
-Write-Host $chocoInstallFiles
-
 foreach ($file in $chocoInstallFiles) {
     $content = Get-Content $file.PSPath
     $content = $content -replace [regex]::Escape('$msiurl$'), $msiurl
