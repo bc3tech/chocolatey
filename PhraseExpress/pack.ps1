@@ -39,3 +39,8 @@ foreach ($file in $chocoInstallFiles) {
 choco pack .\PhraseExpress\phraseexpress.nuspec --version $version --out $outputdirectory
 choco pack .\PhraseExpress.Install\phraseexpress.install.nuspec --version $version --out $outputdirectory
 choco pack .\PhraseExpress.Portable\phraseexpress.portable.nuspec --version $version --out $outputdirectory
+
+Write-Host 'Updated. Check out the packages:'
+Write-Host 'https://chocolatey.org/packages/phraseexpress'
+Write-Host 'https://chocolatey.org/packages/phraseexpress.install'
+Write-Host 'https://chocolatey.org/packages/phraseexpress.portable'
