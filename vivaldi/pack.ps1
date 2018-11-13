@@ -35,3 +35,5 @@ $content = $content -replace [regex]::Escape('$64sha$'), $sha64
 Set-Content $installFile.PSPath -Value $content
 
 choco pack --version $version --out $outputdirectory
+
+Write-Host 'Uploaded. Check it out here: https://chocolatey.org/packages/vivaldi'
