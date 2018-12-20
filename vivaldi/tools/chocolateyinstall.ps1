@@ -1,11 +1,11 @@
 ﻿$ErrorActionPreference = 'Stop';
 
 $packageName= 'vivaldi'
- 
+
 $packageArgs = @{
     packageName    = $packageName
     fileType       = 'exe'
-       
+
     url            = '$32url$'
     silentArgs     = '--vivaldi-silent --do-not-launch-chrome --vivaldi-update'
     
