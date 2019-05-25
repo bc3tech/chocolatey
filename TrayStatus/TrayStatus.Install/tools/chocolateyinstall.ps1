@@ -20,8 +20,6 @@ $packageArgs = @{
   softwareName  = 'TrayStatus.Install*'
   checksum      = 'BA8997B50CDD88E9D27A3CB3AB84D7F292006BE66494A987FD202BEACE1EF4B2'
   checksumType  = 'sha256'
-  checksum64    = 'BA8997B50CDD88E9D27A3CB3AB84D7F292006BE66494A987FD202BEACE1EF4B2'
-  checksumType64= 'sha256'
 }
 
 Install-ChocolateyPackage @packageArgs
