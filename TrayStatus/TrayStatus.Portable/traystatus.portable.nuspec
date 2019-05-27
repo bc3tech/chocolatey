@@ -22,10 +22,9 @@
     <licenseUrl>https://www.traystatus.com/License/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://bc3techchocosupport.blob.core.windows.net/iconimages/TrayStatus.png</iconUrl>
-    <!--<dependencies>
-      <dependency id="" version="__VERSION__" />
-      <dependency id="" />
-    </dependencies>-->
+    <dependencies>
+      <dependency id="dotnet4.6.2" version="4.6.01590.20190226" />
+    </dependencies>
     <releaseNotes>https://www.traystatus.com/ChangeLog/</releaseNotes>
     <!--<provides></provides>-->
   </metadata>
