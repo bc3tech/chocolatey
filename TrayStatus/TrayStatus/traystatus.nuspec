@@ -6,7 +6,7 @@
     <id>traystatus</id>
     <title>TrayStatus</title>
     <version>4.0</version>
-	<packageSourceUrl>https://github.com/bc3tech/chocolatey/tree/master/TrayStatus</packageSourceUrl>
+    <packageSourceUrl>https://github.com/bc3tech/chocolatey/tree/master/TrayStatus</packageSourceUrl>
     <authors>Binary Fortress</authors>
     <owners>bc3tech</owners>
     <summary>CapsLock, NumLock and ScrollLock Status in your Tray</summary>
@@ -21,7 +21,7 @@
     <copyright></copyright>
     <licenseUrl>https://www.traystatus.com/License/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://bc3techchocosupport.blob.core.windows.net/iconimages/TrayStatus.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/bc3tech/chocolatey/TrayStatus/icon.png</iconUrl>
     <dependencies>
       <dependency id="TrayStatus.Install" version="[4.0]" />
     </dependencies>
