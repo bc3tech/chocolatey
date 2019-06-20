@@ -23,19 +23,19 @@
     <!-- projectUrl is required for the community feed -->
     <projectUrl>http://vivaldi.com</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/bc3tech/chocolatey/vivaldi/icon.png</iconUrl>
-    <!-- <copyright>Year Software Vendor</copyright> -->
+    <copyright>Vivaldi Technologies</copyright>
     <!-- If there is a license Url available, it is is required for the community feed -->
-    <!-- <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl>
-    <requireLicenseAcceptance>true</requireLicenseAcceptance>-->
+    <licenseUrl>https://vivaldi.com/privacy/vivaldi-end-user-license-agreement/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://vivaldi.com/source/</projectSourceUrl>
-    <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
+    <docsUrl>https://help.vivaldi.com/</docsUrl>
     <!--<mailingListUrl></mailingListUrl>-->
     <bugTrackerUrl>https://vivaldi.com/bugreport/</bugTrackerUrl>
     <tags>vivaldi chromium browser googlechrome chrome</tags>
     <summary>A Browser for our Friends</summary>
     <description>Web browser based on [Chromium](https://chocolatey.org/packages/chromium) with added [features](https://vivaldi.com/features/) inspired by [Opera](https://chocolatey.org/packages/opera).</description>
 
-    <releaseNotes>https://vivaldi.net/blog/</releaseNotes>
+    <!-- <releaseNotes>https://vivaldi.net/blog/</releaseNotes> -->
     
     <!-- =============================== -->
 
