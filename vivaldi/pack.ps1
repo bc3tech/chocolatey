@@ -34,6 +34,19 @@ $content = $content -replace [regex]::Escape('$64sha$'), $sha64
 
 Set-Content $installFile.PSPath -Value $content
 
+Write-Host 'Setting release notes url if necessary...'
+$nuspecFile = Get-ChildItem .\vivaldi.nuspec
+$content = Get-Content $nuspecFile
+
+if ($version.Contains('-')) {
+    $content = $content -replace [regex]::Escape('$releaseNotes$'), '<releaseNotes>https://vivaldi.com/blog/snapshots</releaseNotes>'
+}
+else {
+    $content = $content -replace [regex]::Escape('$releaseNotes$'), ''
+}
+
+Set-Content $nuspecFile.PSPath -Value $content
+
 choco pack --version $version --out $outputdirectory
 
 Write-Host 'Uploaded. Check it out here: https://chocolatey.org/packages/vivaldi'
