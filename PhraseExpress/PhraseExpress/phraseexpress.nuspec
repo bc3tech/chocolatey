@@ -25,10 +25,10 @@
     <iconUrl>https://cdn.jsdelivr.net/gh/bc3tech/chocolatey/PhraseExpress/icon.jpg</iconUrl>
     <copyright>2002-2017</copyright>
     <!-- If there is a license Url available, it is is required for the community feed -->
-    <licenseUrl>http://www.phraseexpress.com/other/PhraseExpress_license_agreement.pdf</licenseUrl>
+    <licenseUrl>https://www.bartelsmedia.com/terms/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!--<projectSourceUrl>Software Source Location - is the software FOSS somewhere? Link to it with this</projectSourceUrl>-->
-    <docsUrl>http://www.phraseexpress.com/docs11/09/manual.htm</docsUrl>
+    <docsUrl>https://www.phraseexpress.com/doc/</docsUrl>
     <!--<mailingListUrl></mailingListUrl>-->
     <!--<bugTrackerUrl></bugTrackerUrl>-->
     <tags>trial PhraseExpress automation clipboard-manager clipboard-history typing automated-tasks spell-checker macros text-expander macro-recorder autocomplete automation-tool text-replace text-substitution text-snippets admin</tags>
@@ -40,7 +40,7 @@
 - Quick access to the Windows clipboard history.
 - Correct spelling mistakes in any application.
 - Free for personal use</description>
-    <releaseNotes>http://www.phraseexpress.com/docs12/09/changelog.php</releaseNotes>
+    <releaseNotes>https://www.phraseexpress.com/download/changelog/</releaseNotes>
     <!-- =============================== -->
 
     <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
