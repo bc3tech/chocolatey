@@ -22,7 +22,7 @@
     <authors>Bartels Media GmbH</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>http://www.phraseexpress.com/index.html</projectUrl>
-    <iconUrl>https://bc3techchocosupport.blob.core.windows.net/iconimages/phraseexpress.jpg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/bc3tech/chocolatey/PhraseExpress/icon.jpg</iconUrl>
     <copyright>2002-2017</copyright>
     <!-- If there is a license Url available, it is is required for the community feed -->
     <licenseUrl>http://www.phraseexpress.com/other/PhraseExpress_license_agreement.pdf</licenseUrl>
