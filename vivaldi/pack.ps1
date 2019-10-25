@@ -24,29 +24,38 @@ Param(
     [string]
     $outputdirectory = '.\')
 
-$installFile = Get-ChildItem .\tools\chocolateyinstall.ps1
+$chocoInstallFiles = Get-ChildItem . chocolateyinstall.ps1 -Recurse
 
-$content = Get-Content $installFile
-$content = $content -replace [regex]::Escape('$32url$'), $url32
-$content = $content -replace [regex]::Escape('$64url$'), $url64
-$content = $content -replace [regex]::Escape('$32sha$'), $sha32
-$content = $content -replace [regex]::Escape('$64sha$'), $sha64
-
-Set-Content $installFile.PSPath -Value $content
+foreach ($file in $chocoInstallFiles) {
+    $content = Get-Content $file.PSPath
+    $content = $content -replace [regex]::Escape('$32url$'), $url32
+    $content = $content -replace [regex]::Escape('$64url$'), $url64
+    $content = $content -replace [regex]::Escape('$32sha$'), $sha32
+    $content = $content -replace [regex]::Escape('$64sha$'), $sha64
+    
+    Set-Content $file.PSPath -Value $content
+}
 
 Write-Host 'Setting release notes url if necessary...'
-$nuspecFile = Get-ChildItem .\vivaldi.nuspec
-$content = Get-Content $nuspecFile
+$nuspecFiles = Get-ChildItem . *.nuspec -Recurse
 
-if ($version.Contains('-')) {
-    $content = $content -replace [regex]::Escape('$releaseNotes$'), '<releaseNotes>https://vivaldi.com/blog/snapshots</releaseNotes>'
+foreach ($file in $nuspecFiles) {
+    $content = Get-Content $file.PSPath
+
+    if ($version.Contains('-')) {
+        $content = $content -replace [regex]::Escape('$releaseNotes$'), '<releaseNotes>https://vivaldi.com/blog/snapshots</releaseNotes>'
+    }
+    else {
+        $content = $content -replace [regex]::Escape('$releaseNotes$'), ''
+    }
+    
+    Set-Content $file.PSPath -Value $content
 }
-else {
-    $content = $content -replace [regex]::Escape('$releaseNotes$'), ''
-}
 
-Set-Content $nuspecFile.PSPath -Value $content
-
-choco pack --version $version --out $outputdirectory
+choco pack .\vivaldi\vivaldi.nuspec --version $version --out $outputdirectory
+choco pack .\vivaldi.install\vivaldi.install.nuspec --version $version --out $outputdirectory
+choco pack .\vivaldi.portable\vivaldi.portable.nuspec --version $version --out $outputdirectory
 
 Write-Host 'Uploaded. Check it out here: https://chocolatey.org/packages/vivaldi'
+Write-Host 'Uploaded. Check it out here: https://chocolatey.org/packages/vivaldi.install'
+Write-Host 'Uploaded. Check it out here: https://chocolatey.org/packages/vivaldi.portable'
