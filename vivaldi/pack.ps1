@@ -52,10 +52,19 @@ foreach ($file in $nuspecFiles) {
     Set-Content $file.PSPath -Value $content
 }
 
-choco pack .\vivaldi\vivaldi.nuspec --version $version --out $outputdirectory
-choco pack .\vivaldi.install\vivaldi.install.nuspec --version $version --out $outputdirectory
-choco pack .\vivaldi.portable\vivaldi.portable.nuspec --version $version --out $outputdirectory
+try {
+    choco pack .\vivaldi\vivaldi.nuspec --version $version --out $outputdirectory
+    Write-Host 'Uploaded. Check it out here: https://chocolatey.org/packages/vivaldi'
+}
+catch { }
 
-Write-Host 'Uploaded. Check it out here: https://chocolatey.org/packages/vivaldi'
-Write-Host 'Uploaded. Check it out here: https://chocolatey.org/packages/vivaldi.install'
-Write-Host 'Uploaded. Check it out here: https://chocolatey.org/packages/vivaldi.portable'
+try {
+    choco pack .\vivaldi.install\vivaldi.install.nuspec --version $version --out $outputdirectory
+    Write-Host 'Uploaded. Check it out here: https://chocolatey.org/packages/vivaldi.install'
+}
+catch { }
+
+try {
+    choco pack .\vivaldi.portable\vivaldi.portable.nuspec --version $version --out $outputdirectory
+    Write-Host 'Uploaded. Check it out here: https://chocolatey.org/packages/vivaldi.portable'}
+catch { }
