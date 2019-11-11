@@ -18,7 +18,7 @@
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
-    <title>Vivaldi</title>
+    <title>Vivaldi (install)</title>
     <authors>Vivaldi</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>http://vivaldi.com</projectUrl>
