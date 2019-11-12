@@ -1,1 +1,1 @@
-See https://github.com/bc3tech/Tweeten/tree/choco-pkg/builds/choco
+https://chocolatey.org/packages/tweeten

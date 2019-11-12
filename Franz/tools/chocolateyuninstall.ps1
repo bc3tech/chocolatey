@@ -4,12 +4,8 @@ $packageName = 'franz'
 $softwareName = 'franz*'
 $installerType = 'EXE' 
 
-$silentArgs = '/qn /norestart'
-$validExitCodes = @(0, 3010, 1605, 1614, 1641)
-if ($installerType -ne 'MSI') {
-  $silentArgs = '-s'
-  $validExitCodes = @(0)
-}
+$silentArgs = '/S'
+$validExitCodes = @(0)
 
 $uninstalled = $false
 $local_key     = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*'

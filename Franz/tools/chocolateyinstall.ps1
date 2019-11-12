@@ -17,6 +17,6 @@ $packageArgs = @{
   checksumType  = 'SHA256'
 }
 
-New-Item "$($toolsDir)\$($packageName)\tools\FranzSetup.exe.ignore" -type file -force | Out-Null
+New-Item "$($toolsDir)\FranzSetup.exe.ignore" -type file -force | Out-Null
 
 Install-ChocolateyPackage @packageArgs
