@@ -15,7 +15,7 @@ $packageArgs = @{
 
   softwareName  = 'MarkdownPad*'
   checksum      = '609B59E3764608B45F8C5D77CD4CF288BB0EE70802A112E16A7DFA15D7464980'
-  checksumType  = 'md5'
+  checksumType  = 'sha256'
 }
 
 Install-ChocolateyZipPackage @packageArgs
