@@ -6,14 +6,29 @@ $ErrorActionPreference = 'Stop'; # stop on all errors
 
 
 $packageName= 'onetastic' # arbitrary name for the package, used in messages
-$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$toolsDir   = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
 $url        = 'https://getonetastic.com/downloadFile&fv=0&file=OnetasticInstaller.x86.zip&agree=1&download=' # download url
-$url64      = '' # 64bit URL here or remove - if installer contains both (very rare), use $url
+$url64      = 'https://getonetastic.com/downloadFile&fv=0&file=OnetasticInstaller.x64.zip&agree=1&download='
 
 ## Download and unpack a zip file - https://chocolatey.org/docs/helpers-install-chocolatey-zip-package
-Install-ChocolateyZipPackage $packageName $url $toolsDir
+Install-ChocolateyZipPackage $packageName $url $toolsDir $url64
 
 ## Installer, will assert administrative rights - used by Install-ChocolateyPackage
 ## use this for embedding installers in the package when not going to community feed or when you have distribution rights
 ## - https://chocolatey.org/docs/helpers-install-chocolatey-install-package
-Install-ChocolateyInstallPackage $packageName -FileType 'EXE' -File "$($toolsDir)\OnetasticInstaller.exe" -validExitCodes @(0) -silentArgs = ''
+$fileLocation = Join-Path $toolsDir 'OnetasticInstaller.x86.exe'
+$fileLocation64 = Join-Path $toolsDir 'OnetasticInstaller.x64.exe'
+
+$configLocation = Join-Path $toolsDir 'config.xml'
+
+$packageArgs = @{
+  packageName   = $packageName
+  fileType      = 'exe'
+  file          = $fileLocation
+  file64        = $fileLocation64
+  silentArgs    = "/config $($configLocation)"
+  validExitCodes= @(0)
+  softwareName  = 'Onetastic*'
+}
+
+Install-ChocolateyInstallPackage @packageArgs
