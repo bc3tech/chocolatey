@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>albumstomp</id>
-    <version>2.14</version>
+    <version>2.27</version>
     <owners>bc3tech</owners>
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
