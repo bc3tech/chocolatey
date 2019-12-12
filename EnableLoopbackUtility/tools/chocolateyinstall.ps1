@@ -3,7 +3,7 @@
 
 $packageName= 'EnableLoopbackUtility'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://www.fiddler2.com/dl/EnableLoopbackUtility.exe'
+$url        = 'https://telerik-fiddler.s3.amazonaws.com/fiddler/addons/enableloopbackutility.exe'
 $url64      = ''
 
 $packageArgs = @{
