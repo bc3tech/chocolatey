@@ -5,10 +5,10 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>traystatus</id>
     <title>TrayStatus</title>
-    <version>4.1</version>
+    <version>4.2</version>
     <packageSourceUrl>https://github.com/bc3tech/chocolatey/tree/master/TrayStatus</packageSourceUrl>
     <authors>Binary Fortress</authors>
-    <owners>bc3tech</owners>
+    <owners>bc3tech virtualex</owners>
     <summary>CapsLock, NumLock and ScrollLock Status in your Tray</summary>
     <description>CapsLock, NumLock and ScrollLock Status in your Tray 
     </description>
@@ -23,7 +23,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.jsdelivr.net/gh/bc3tech/chocolatey/TrayStatus/icon.png</iconUrl>
     <dependencies>
-      <dependency id="TrayStatus.Install" version="[4.1]" />
+      <dependency id="TrayStatus.Install" version="[4.2]" />
     </dependencies>
     <releaseNotes>https://www.traystatus.com/ChangeLog/</releaseNotes>
     <!--<provides></provides>-->
