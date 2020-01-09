@@ -21,7 +21,7 @@
     <title>PhraseExpress (Portable)</title>
     <authors>Bartels Media GmbH</authors>
     <!-- projectUrl is required for the community feed -->
-    <projectUrl>http://www.phraseexpress.com/index.html</projectUrl>
+    <projectUrl>https://www.phraseexpress.com/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/bc3tech/chocolatey/PhraseExpress/icon.png</iconUrl>
     <copyright>2002-2017</copyright>
     <!-- If there is a license Url available, it is is required for the community feed -->
