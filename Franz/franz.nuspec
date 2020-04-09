@@ -41,12 +41,12 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <iconUrl>https://bc3techchocosupport.blob.core.windows.net/iconimages/franz.png</iconUrl>
     <copyright>Copyright (c) 2017 Meet Franz (Stefan Malzner &amp; Jonathan Burke)</copyright>
     <!-- If there is a license Url available, it is is required for the community feed -->
-    <licenseUrl>http://www.meetfranz.com/terms.html</licenseUrl>
+    <licenseUrl>https://github.com/meetfranz/franz/blob/master/LICENSE</licenseUrl>
     <!--<requireLicenseAcceptance>true</requireLicenseAcceptance>-->
-    <!-- <projectSourceUrl></projectSourceUrl> -->
+    <projectSourceUrl>https://github.com/meetfranz/franz</projectSourceUrl>
     <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
     <!--<mailingListUrl></mailingListUrl>-->
-    <!--<bugTrackerUrl></bugTrackerUrl>-->
+    <bugTrackerUrl>https://github.com/meetfranz/franz/issues</bugTrackerUrl>
     <tags>franz Slack HipChat Facebook Telegram WhatsApp WeChat Google Skype GroupMe ChatWork Gitter Discord Steam Grape MicrosoftTeams Tweetdeck</tags>
     <summary>Franz is a free messaging app / former Emperor of Austria and combines chat &amp; messaging services into one application.</summary>
     <description>He currently supports Slack, WhatsApp, WeChat, HipChat, Facebook Messenger, Telegram, Google Hangouts, GroupMe, Skype and many more.</description>
