@@ -3,7 +3,7 @@
 
 $packageName= 'TrayStatus' 
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://binaryfortressdownloads.com/Download/BFSFiles/114/TrayStatus-4.3.zip' 
+$url        = 'https://binaryfortressdownloads.com/Download/BFSFiles/114/TrayStatus-4.4.zip' 
 
 $packageArgs = @{
   packageName   = $packageName
@@ -13,7 +13,7 @@ $packageArgs = @{
   silentArgs    = "/qn /norestart /l*v `"$env:TEMP\chocolatey\$($packageName)\$($packageName).MsiInstall.log`"" 
   validExitCodes= @(0, 3010, 1641)
   softwareName  = 'TrayStatus*' 
-  checksum      = 'C2574B5D031ABF8FC255A1D92230A6DBB0A3B6AE81306FA467065AA61736A7CC'
+  checksum      = '3BC5321FF4B691E7ED4679E074DC049D2D2A8FC524E3FD7F49A6D738F8CB8A15'
   checksumType  = 'sha256' #default is md5, can also be sha1
 }
 
