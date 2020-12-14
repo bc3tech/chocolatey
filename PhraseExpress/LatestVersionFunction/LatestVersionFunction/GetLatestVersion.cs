@@ -16,12 +16,12 @@ namespace LatestVersionFunction
         private static readonly HttpClient _client = new HttpClient();
 
         [FunctionName("GetLatestVersion")]
-        public static async System.Threading.Tasks.Task<IActionResult> RunAsync([HttpTrigger(AuthorizationLevel.Function, "get", Route = null)]HttpRequest req, TraceWriter log)
+        public static async System.Threading.Tasks.Task<IActionResult> RunAsync([HttpTrigger(AuthorizationLevel.Function, "get", Route = null)] HttpRequest req, TraceWriter log)
         {
             //using (var changelogStream = await _client.GetStreamAsync(Environment.GetEnvironmentVariable(@"ChangeLogUrl")))
             {
                 // eg: https://www.phraseexpress.com/update13.php
-                XDocument doc = XDocument.Load(Environment.GetEnvironmentVariable(@"VersionCheckUrl"));
+                XDocument doc = XDocument.Load($@"{Environment.GetEnvironmentVariable(@"VersionCheckUrl")}?{Environment.GetEnvironmentVariable(@"VersionCheckQueryParams")}");
 
                 /* sample doc
 <xml>
