@@ -2,7 +2,7 @@
   "IsEncrypted": false,
   "Values": {
     "FUNCTIONS_WORKER_RUNTIME": "dotnet",
-    "VersionCheckUrl": "https://www.phraseexpress.com/update14.php",
+    "VersionCheckUrl": "https://www.phraseexpress.com/update15.php",
     "VersionCheckQueryParams": "license=DEMO&hs=43f755f83538369dd7668077bee7448b",
     "DownloadBaseUrl": "https://www.phraseexpress.com/"
   }

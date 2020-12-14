@@ -70,21 +70,28 @@ namespace LatestVersionFunction
 
                 using (var sha = SHA256.Create())
                 {
-                    using (var versionDownload = await _client.GetStreamAsync(zipDownloadUrl))
+                    try
                     {
-                        var hashBytes = sha.ComputeHash(versionDownload);
-                        zipHashString = string.Join(string.Empty, hashBytes.Select(b => b.ToString("X2")));
-                        log.LogInformation($@"ZIP computed hash: {zipHashString}");
-                    }
-                    GC.Collect();
+                        using (var versionDownload = await _client.GetStreamAsync(zipDownloadUrl))
+                        {
+                            var hashBytes = sha.ComputeHash(versionDownload);
+                            zipHashString = string.Join(string.Empty, hashBytes.Select(b => b.ToString("X2")));
+                            log.LogInformation($@"ZIP computed hash: {zipHashString}");
+                        }
+                        GC.Collect();
 
-                    using (var versionDownload = await _client.GetStreamAsync(msiDownloadUrl))
-                    {
-                        var hashBytes = sha.ComputeHash(versionDownload);
-                        msiHashString = string.Join(string.Empty, hashBytes.Select(b => b.ToString("X2")));
-                        log.LogInformation($@"MSI computed hash: {msiHashString}");
+                        using (var versionDownload = await _client.GetStreamAsync(msiDownloadUrl))
+                        {
+                            var hashBytes = sha.ComputeHash(versionDownload);
+                            msiHashString = string.Join(string.Empty, hashBytes.Select(b => b.ToString("X2")));
+                            log.LogInformation($@"MSI computed hash: {msiHashString}");
+                        }
+                        GC.Collect();
                     }
-                    GC.Collect();
+                    catch (HttpRequestException ex)
+                    {
+                        return new NotFoundObjectResult(ex.ToString());
+                    }
                 }
                 GC.Collect();
 

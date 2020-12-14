@@ -266,3 +266,4 @@ paket-files/
 __pycache__/
 *.pyc
 *.pubxml
+/PhraseExpress/LatestVersionFunction/LatestVersionFunction/Properties/ServiceDependencies
