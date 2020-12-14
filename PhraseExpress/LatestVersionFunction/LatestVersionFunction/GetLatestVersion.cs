@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
-using Microsoft.Azure.WebJobs.Host;
+using Microsoft.Extensions.Logging;
 
 namespace LatestVersionFunction
 {
@@ -16,12 +16,12 @@ namespace LatestVersionFunction
         private static readonly HttpClient _client = new HttpClient();
 
         [FunctionName("GetLatestVersion")]
-        public static async System.Threading.Tasks.Task<IActionResult> RunAsync([HttpTrigger(AuthorizationLevel.Function, "get", Route = null)] HttpRequest req, TraceWriter log)
+        public static async System.Threading.Tasks.Task<IActionResult> RunAsync([HttpTrigger(AuthorizationLevel.Function, "get", Route = null)] HttpRequest req, ILogger log)
         {
             //using (var changelogStream = await _client.GetStreamAsync(Environment.GetEnvironmentVariable(@"ChangeLogUrl")))
             {
                 // eg: https://www.phraseexpress.com/update13.php
-                XDocument doc = XDocument.Load($@"{Environment.GetEnvironmentVariable(@"VersionCheckUrl")}?{Environment.GetEnvironmentVariable(@"VersionCheckQueryParams")}");
+                var doc = XDocument.Load($@"{Environment.GetEnvironmentVariable(@"VersionCheckUrl")}?{Environment.GetEnvironmentVariable(@"VersionCheckQueryParams")}");
 
                 /* sample doc
 <xml>
@@ -68,13 +68,13 @@ namespace LatestVersionFunction
                     targetVersion = versions.Single(i => i.Name.LocalName.Equals(@"minorupdate", StringComparison.OrdinalIgnoreCase)).Value;
                 }
 
-                using (SHA256 sha = SHA256.Create())
+                using (var sha = SHA256.Create())
                 {
                     using (var versionDownload = await _client.GetStreamAsync(zipDownloadUrl))
                     {
                         var hashBytes = sha.ComputeHash(versionDownload);
                         zipHashString = string.Join(string.Empty, hashBytes.Select(b => b.ToString("X2")));
-                        log.Info($@"ZIP computed hash: {zipHashString}");
+                        log.LogInformation($@"ZIP computed hash: {zipHashString}");
                     }
                     GC.Collect();
 
@@ -82,7 +82,7 @@ namespace LatestVersionFunction
                     {
                         var hashBytes = sha.ComputeHash(versionDownload);
                         msiHashString = string.Join(string.Empty, hashBytes.Select(b => b.ToString("X2")));
-                        log.Info($@"MSI computed hash: {msiHashString}");
+                        log.LogInformation($@"MSI computed hash: {msiHashString}");
                     }
                     GC.Collect();
                 }
