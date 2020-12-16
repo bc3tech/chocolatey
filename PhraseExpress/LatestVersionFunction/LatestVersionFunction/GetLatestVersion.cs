@@ -90,7 +90,7 @@ namespace LatestVersionFunction
                     }
                     catch (HttpRequestException ex)
                     {
-                        return new NotFoundObjectResult(ex.ToString());
+                        return new NotFoundObjectResult(new { zipDownloadUrl, msiDownloadUrl, exception = ex.ToString() });
                     }
                 }
                 GC.Collect();
