@@ -1,0 +1,41 @@
+on:
+  push:
+    paths:
+      - "TrayStatus/**"
+
+jobs:
+  choco-pack:
+    runs-on: windows-latest
+    steps:
+      - name: pack traystatus.install
+        run: choco pack
+        working-directory: TrayStatus.Install
+      - name: pack traystatus.portable
+        run: choco pack
+        working-directory: TrayStatus.Portable
+      - name: pack traystatus
+        run: choco pack
+        working-directory: TrayStatus
+      - name: publish artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: packages
+          path: 'TrayStatus/**.nupkg'
+  choco-push:
+    runs-on: windows-latest
+    if: github.ref == 'refs/heads/master'
+    steps:
+      - name: Download a single artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: packages
+      - name: publish to chocolatey community feed
+        env:
+          PUSH_URL: ${{ secrets.PUSH_URL }}
+          API_KEY: ${{ secrets.API_KEY }}
+        run: |
+          $nupkgs = Get-ChildItem . *.nupkg
+          foreach ($pkg in $nupkgs) {
+            Write-Host "Pushing: $($pkg.FullName) ..."
+            choco push "$($pkg.FullName)" -s "$env:PUSH_URL" -k "$env:API_KEY"
+          }
