@@ -5,7 +5,7 @@ on:
       - "TrayStatus/**"
 
 jobs:
-  choco-pack:
+  pack:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
@@ -24,7 +24,8 @@ jobs:
         with:
           name: packages
           path: 'TrayStatus/**.nupkg'
-  choco-push:
+  publish:
+    needs: pack
     runs-on: windows-latest
     if: github.ref == 'refs/heads/master'
     steps:
