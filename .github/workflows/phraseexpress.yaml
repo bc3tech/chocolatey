@@ -34,7 +34,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: packages
-        path: 'artifacts/**.nupkg'
+        path: '${{ github.workspace }}/artifacts/**.nupkg'
 
   publish:
     runs-on: windows-latest
