@@ -1,0 +1,56 @@
+name: Franz deployment
+on:
+  workflow_dispatch:
+    inputs:
+      pkgver:
+        description: Version of the package
+        required: true
+      url32:
+        description: URL to the 32-bit installation
+        required: true
+      sha32:
+        description: SHA of the 32-bit installation file
+        required: true
+      url64:
+        description: URL to the 64-bit installation file
+        required: true
+      sha64:
+        description: SHA of the 64-bit installation file
+        required: true      
+
+jobs:
+  pack:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: run pack script
+      run: |
+        md ${{ github.workspace }}/artifacts
+        .\pack.ps1 -version ${{ github.event.inputs.pkgver }} -url32 ${{ github.event.inputs.url32 }} -sha32 ${{ github.event.inputs.sha32 }} -url64 ${{ github.event.inputs.url64 }} -sha64 ${{ github.event.inputs.sha64 }} -outputdirectory ${{ github.workspace }}/artifacts
+      working-directory: vivaldi
+
+    - name: publish artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: packages
+        path: '${{ github.workspace }}/artifacts/**.nupkg'
+
+  publish:
+    runs-on: windows-latest
+    if: github.ref == 'refs/heads/master'
+    steps:
+      - name: Download a single artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: packages
+      - name: publish to chocolatey community feed
+        env:
+          PUSH_URL: ${{ secrets.PUSH_URL }}
+          API_KEY: ${{ secrets.API_KEY }}
+        run: |
+          $nupkgs = Get-ChildItem . *.nupkg
+          foreach ($pkg in $nupkgs) {
+            Write-Host "Pushing: $($pkg.FullName) ..."
+            choco push "$($pkg.FullName)" -s "$env:PUSH_URL" -k "$env:API_KEY"
+          }
