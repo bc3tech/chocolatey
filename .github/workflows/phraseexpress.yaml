@@ -1,0 +1,56 @@
+name: PhraseExpress deployment
+on:
+  workflow_dispatch:
+    inputs:
+      pkgver:
+        description: Version of the package
+        required: true
+      msiurl:
+        description: URL to the MSI installation file
+        required: true
+      msisha:
+        description: SHA of the MSI file
+        required: true
+      zipurl:
+        description: URL of the ZIP installation file
+        required: true
+      zipsha:
+        description: SHA of the ZIP file
+        required: true      
+
+jobs:
+  pack:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: run pack script
+      run: |
+        md ${{ github.workspace }}/artifacts
+        .\pack.ps1 -version ${{ github.event.inputs.pkgver }} -msiurl ${{ github.event.inputs.msiurl }} -msisha ${{ github.event.inputs.msisha }} -zipurl ${{ github.event.inputs.zipurl }} -zipsha ${{ github.event.inputs.zipsha }} -outputdirectory ${{ github.workspace }}/artifacts
+      working-directory: PhraseExpress
+
+    - name: publish artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: packages
+        path: 'artifacts/**.nupkg'
+
+  publish:
+    runs-on: windows-latest
+    if: github.ref == 'refs/heads/master'
+    steps:
+      - name: Download a single artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: packages
+      - name: publish to chocolatey community feed
+        env:
+          PUSH_URL: ${{ secrets.PUSH_URL }}
+          API_KEY: ${{ secrets.API_KEY }}
+        run: |
+          $nupkgs = Get-ChildItem . *.nupkg
+          foreach ($pkg in $nupkgs) {
+            Write-Host "Pushing: $($pkg.FullName) ..."
+            choco push "$($pkg.FullName)" -s "$env:PUSH_URL" -k "$env:API_KEY"
+          }

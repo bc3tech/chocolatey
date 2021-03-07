@@ -1,3 +1,4 @@
+name: TrayStatus CI/CD
 on:
   push:
     paths:
@@ -7,6 +8,8 @@ jobs:
   choco-pack:
     runs-on: windows-latest
     steps:
+      - uses: actions/checkout@v2
+
       - name: pack traystatus.install
         run: choco pack
         working-directory: TrayStatus.Install
