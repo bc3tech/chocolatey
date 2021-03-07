@@ -25,7 +25,9 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: run pack script
-      run: md artifacts && .\pack.ps1 -version ${{ github.event.inputs.pkgver }} -msiurl ${{ github.event.inputs.msiurl }} -msisha ${{ github.event.inputs.msisha }} -zipurl ${{ github.event.inputs.zipurl }} -zipsha ${{ github.event.inputs.zipsha }} -outputdirectory artifacts
+      run: |
+        md artifacts
+        .\pack.ps1 -version ${{ github.event.inputs.pkgver }} -msiurl ${{ github.event.inputs.msiurl }} -msisha ${{ github.event.inputs.msisha }} -zipurl ${{ github.event.inputs.zipurl }} -zipsha ${{ github.event.inputs.zipsha }} -outputdirectory artifacts
       working-directory: PhraseExpress
 
     - name: publish artifact
