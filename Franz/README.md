@@ -1,3 +1,3 @@
-[![Build status](https://dev.azure.com/bc3tech/BC3%20Technologies/_apis/build/status/Chocolatey/Franz%20Releases%20-%20Flow%20Triggered)](https://dev.azure.com/bc3tech/BC3%20Technologies/_build/latest?definitionId=47)
+[![Franz deployment](https://github.com/bc3tech/chocolatey/actions/workflows/franz.yaml/badge.svg)](https://github.com/bc3tech/chocolatey/actions/workflows/franz.yaml)
 
 https://chocolatey.org/packages/franz
