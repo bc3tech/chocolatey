@@ -12,13 +12,13 @@ jobs:
 
       - name: pack traystatus.install
         run: choco pack
-        working-directory: TrayStatus.Install
+        working-directory: TrayStatus/TrayStatus.Install
       - name: pack traystatus.portable
         run: choco pack
-        working-directory: TrayStatus.Portable
+        working-directory: TrayStatus/TrayStatus.Portable
       - name: pack traystatus
         run: choco pack
-        working-directory: TrayStatus
+        working-directory: TrayStatus/TrayStatus
       - name: publish artifact
         uses: actions/upload-artifact@v2
         with:
