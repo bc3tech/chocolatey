@@ -7,7 +7,7 @@ $packageArgs = @{
     fileType       = 'exe'
 
     url            = '$32url$'
-    silentArgs     = '--vivaldi-silent --do-not-launch-chrome --vivaldi-update --system-level'
+    silentArgs     = '--vivaldi-install-dir=$($env:ProgramFiles)\Vivaldi --vivaldi-silent --do-not-launch-chrome --vivaldi-update --system-level'
     
     checksum       = '$32sha$'
     checksumType   = 'sha256'
