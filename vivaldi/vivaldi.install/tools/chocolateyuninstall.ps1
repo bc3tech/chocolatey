@@ -11,7 +11,7 @@ if (!$regKey) {
         packageName    = $packageName
         file           = "$($regKey.UninstallString)"
                               # Workaround to get around issue with incorrect positive from package validator
-        silentArgs     = "$($($regKey.('Uninstall'+'Arguments')).Replace('--vivaldi','')) --force-uninstall --vivaldi-silent --do-not-launch-chrome"
+        silentArgs     = "$($($regKey.('Uninstall'+'Arguments')).Replace('--vivaldi','')) --uninstall --force-uninstall --system-level --vivaldi-silent --do-not-launch-chrome"
         validExitCodes = @(0,19)
     }
 
