@@ -23,7 +23,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: packages
-          path: 'TrayStatus/**.nupkg'
+          path: 'TrayStatus/**/*.nupkg'
   publish:
     needs: pack
     runs-on: windows-latest
