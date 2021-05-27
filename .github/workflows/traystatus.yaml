@@ -27,7 +27,7 @@ jobs:
   publish:
     needs: pack
     runs-on: windows-latest
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/main'
     steps:
       - name: Download a single artifact
         uses: actions/download-artifact@v2
