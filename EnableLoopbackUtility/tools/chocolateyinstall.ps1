@@ -3,8 +3,7 @@
 
 $packageName= 'EnableLoopbackUtility'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://www.fiddler2.com/dl/EnableLoopbackUtility.exe'
-$url64      = ''
+$url        = 'https://telerik-fiddler.s3.amazonaws.com/fiddler/addons/enableloopbackutility.exe'
 
 $packageArgs = @{
   packageName   = $packageName
@@ -17,27 +16,8 @@ $packageArgs = @{
   silentArgs   = '/S'
 
   softwareName  = 'EnableLoopbackUtility*'
-  checksum      = ''
-  checksumType  = 'md5'
-  checksum64    = ''
-  checksumType64= 'md5'
+  checksum      = '26945F5744E1C2965F5D8B556477C7C9D7100C00DE125DB461F7328EACB57C60'
+  checksumType  = 'sha256'
 }
 
 Install-ChocolateyPackage @packageArgs
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
