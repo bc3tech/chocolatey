@@ -60,8 +60,9 @@ namespace LatestVersionFunction
                     && isBeta)
                 {
                     targetVersion = versions.Single(i => i.Name.LocalName.Equals(@"betaversion", StringComparison.OrdinalIgnoreCase)).Value;
-                    zipDownloadUrl = $@"{downloadBaseUrl}PhraseExpressBeta_USB.zip";
-                    msiDownloadUrl = $@"{downloadBaseUrl}PhraseExpressBetaSetup.exe";
+                    var betaVersionSuffix = Environment.GetEnvironmentVariable(@"BetaVersionSuffix");
+                    zipDownloadUrl = $@"{downloadBaseUrl}PhraseExpress{betaVersionSuffix}_USB.zip";
+                    msiDownloadUrl = $@"{downloadBaseUrl}PhraseExpress{betaVersionSuffix}Setup.exe";
                 }
                 else
                 {   // assuming the default download URL is always a minor version
