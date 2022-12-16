@@ -21,8 +21,9 @@ name: Deploy PhraseExpress VersionFetcher
 on:
   push:
     branches:
-    - "main"
-    paths: PhraseExpress/LatestVersionFunction/*
+      - 'main'
+    paths:
+      - 'PhraseExpress/LatestVersionFunction/**'
 
 env:
   AZURE_FUNCTIONAPP_NAME: 'PhraseExpressVersionChecker'   # set this to your function app name on Azure
