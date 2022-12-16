@@ -3,6 +3,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Security.Cryptography;
 using System.Xml.Linq;
+
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
@@ -59,6 +60,11 @@ namespace LatestVersionFunction
                     && bool.TryParse(betaValue, out var isBeta)
                     && isBeta)
                 {
+                    if (!bool.Parse(Environment.GetEnvironmentVariable(@"BetaIsCurrentlyOffered")))
+                    {
+                        return new NoContentResult();
+                    }
+
                     targetVersion = versions.Single(i => i.Name.LocalName.Equals(@"betaversion", StringComparison.OrdinalIgnoreCase)).Value;
                     var betaVersionSuffix = Environment.GetEnvironmentVariable(@"BetaVersionSuffix");
                     zipDownloadUrl = $@"{downloadBaseUrl}PhraseExpress{betaVersionSuffix}_USB.zip";
