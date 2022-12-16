@@ -50,6 +50,11 @@ jobs:
         dotnet build --configuration Release --output ./output
         popd
 
+    - name: Azure Login
+      uses: Azure/login@v1
+      with:
+        creds: ${{ secrets.PHRASEEXPRESS_DEPLOY_AZURE_CREDENTIALS }}
+
     - name: 'Publish to Azure'
       uses: Azure/functions-action@v1
       id: fa
@@ -58,3 +63,10 @@ jobs:
         package: '${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}\output'
         # publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }} # Remove publish-profile to use Azure RBAC
         
+    - name: Azure CLI script
+      uses: azure/CLI@v1
+      with:
+        inlineScript: |
+          az logout
+          az cache purge
+          az account clear
