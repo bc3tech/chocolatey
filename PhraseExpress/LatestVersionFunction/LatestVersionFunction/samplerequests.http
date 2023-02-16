@@ -1,0 +1,7 @@
+# From fiddler trace of app installation
+GET https://www.phraseexpress.com/update16.php?license=DEMO&version=16.1.6&hwid=CE6BBECC&hs=43f755f83538369dd7668077bee7448b&langid=09&priority=1 HTTP/1.1
+
+###
+
+# To hit local instance of the Function
+GET http://localhost:7071/api/GetLatestVersion HTTP/1.1
