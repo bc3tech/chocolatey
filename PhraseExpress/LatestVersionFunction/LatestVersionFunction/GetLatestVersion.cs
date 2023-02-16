@@ -72,7 +72,20 @@ namespace LatestVersionFunction
                 }
                 else
                 {   // assuming the default download URL is always a minor version
-                    targetVersion = versions.Single(i => i.Name.LocalName.Equals(@"minorupdate", StringComparison.OrdinalIgnoreCase)).Value;
+                    // pick the larges of new, major, and minor updates shown in the response
+
+                    Version.TryParse(versions.Single(i => i.Name.LocalName.Equals(@"minorupdate", StringComparison.OrdinalIgnoreCase)).Value, out var minorVersion);
+                    Version.TryParse(versions.Single(i => i.Name.LocalName.Equals(@"majorupdate", StringComparison.OrdinalIgnoreCase)).Value, out var majorVersion);
+                    Version.TryParse(versions.Single(i => i.Name.LocalName.Equals(@"newversion", StringComparison.OrdinalIgnoreCase)).Value, out var newVersion);
+
+                    if (newVersion > majorVersion)
+                    {
+                        targetVersion = newVersion > minorVersion ? newVersion.ToString() : minorVersion.ToString();
+                    }
+                    else
+                    {
+                        targetVersion = majorVersion > minorVersion ? majorVersion.ToString() : minorVersion.ToString();
+                    }
                 }
 
                 using (var sha = SHA256.Create())
