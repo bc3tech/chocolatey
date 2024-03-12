@@ -22,7 +22,9 @@ jobs:
   pack:
     runs-on: windows-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 1
 
     - name: run pack script
       run: |
@@ -31,7 +33,7 @@ jobs:
       working-directory: PhraseExpress
 
     - name: publish artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: packages
         path: '${{ github.workspace }}/artifacts/**.nupkg'
@@ -42,7 +44,7 @@ jobs:
     if: github.ref == 'refs/heads/main'
     steps:
       - name: Download a single artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: packages
       - name: publish to chocolatey community feed
