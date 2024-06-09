@@ -2,10 +2,10 @@
 $ErrorActionPreference = 'Stop';
 
 
-$packageName= 'PhraseExpress.Portable'
-$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = '$zipurl$' 
-$url64      = $url
+$packageName = 'PhraseExpress.Portable'
+$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$url = '$zipurl$' 
+$url64 = $url
 
 $packageArgs = @{
   packageName   = $packageName
@@ -17,6 +17,7 @@ $packageArgs = @{
 
   softwareName  = 'PhraseExpress.Portable*'
   checksum      = '$zipsha$'
+  checksum64    = '$zipsha$'
   checksumType  = 'sha256'
 }
 

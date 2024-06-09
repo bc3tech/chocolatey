@@ -19,6 +19,7 @@ $packageArgs = @{
 
   softwareName  = 'PhraseExpress*'
   checksum      = '$msisha$'
+  checksum64    = '$msisha$'
   checksumType  = 'sha256'
 }
 
