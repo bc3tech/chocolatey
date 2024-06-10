@@ -5,6 +5,8 @@
     "VersionCheckUrl": "https://www.phraseexpress.com/update16.php",
     "VersionCheckQueryParams": "license=DEMO&hs=43f755f83538369dd7668077bee7448b",
     "DownloadBaseUrl": "https://www.phraseexpress.com/",
-    "BetaIsCurrentlyOffered": false
+    "BetaIsCurrentlyOffered": true,
+    "BetaVersionSuffix": "Beta",
+    "BetaVersionCheckUrl": "https://www.phraseexpress.com/update16.php"
   }
 }
